@@ -1,76 +1,79 @@
-🏆 Hall da Fama · ORG ON CAMPS eFootball
+<div align="center">
 
-Projeto desenvolvido para registrar e exibir o histórico de campeões dos campeonatos de eFootball da ORG ON CAMPS.
+# 🏆 Hall da Fama
+### ORG ON CAMPS · eFootball
 
-🌐 Deploy
+Sistema web desenvolvido para registrar, organizar e exibir o histórico de campeões dos campeonatos da comunidade ORG ON CAMPS no eFootball.
 
-Acesse o projeto online:
+<br>
 
-🔗 https://hall-da-fama-theta.vercel.app
+🔗 <a href="https://hall-da-fama-theta.vercel.app" target="_blank">Acessar Projeto</a>
 
-📸 Preview
-Desktop
-Pódio dos maiores campeões
-Ranking histórico
-Lista completa de campeões
-Estatísticas e gráficos
-Modal com histórico detalhado dos jogadores
-Mobile
-Layout responsivo
-Scroll horizontal na tabela
-Navegação otimizada
-🚀 Tecnologias Utilizadas
-HTML5
-CSS3
-JavaScript Vanilla
-Chart.js
-Vercel
-✨ Funcionalidades
+</div>
 
-✅ Ranking automático de campeões
-✅ Pódio dos maiores vencedores
-✅ Filtros por jogador e campeonato
-✅ Busca dinâmica
-✅ Paginação
-✅ Modal com histórico do jogador
-✅ Estatísticas em tempo real
-✅ Gráficos interativos
-✅ Responsividade para celular
+---
 
-📂 Estrutura do Projeto
-hall-da-fama/
-│
-├── index.html
-├── css/
-│   └── style.css
-├── js/
-│   ├── app.js
-│   └── charts.js
-├── data/
-│   └── data.js
-└── assets/
-    ├── logo.png
-    └── banner.png
-⚙️ Como Rodar Localmente
+# 📸 Preview
 
-Clone o repositório:
+## 💻 Desktop
 
-git clone https://github.com/joaoguilherme09/hall-da-fama.git
+- 🥇 Pódio dos maiores campeões
+- 📊 Ranking histórico completo
+- 🏆 Lista de campeões
+- 📈 Estatísticas e gráficos
+- 👤 Modal com histórico detalhado
 
-Abra a pasta do projeto:
+## 📱 Mobile
 
-cd hall-da-fama
+- 📲 Layout responsivo
+- ↔️ Scroll horizontal na tabela
+- ⚡ Navegação otimizada
 
-Depois basta abrir o arquivo index.html no navegador.
+---
 
+# 🚀 Tecnologias Utilizadas
+
+<div align="center">
+
+| Tecnologia | Descrição |
+|---|---|
+| HTML5 | Estrutura do projeto |
+| CSS3 | Estilização e responsividade |
+| JavaScript | Lógica e interatividade |
+| Chart.js | Gráficos estatísticos |
+| Vercel | Deploy da aplicação |
+
+</div>
+
+---
+
+# ✨ Funcionalidades
+
+```diff
++ Ranking automático de campeões
++ Pódio dos maiores vencedores
++ Sistema de filtros
++ Busca dinâmica
++ Paginação
++ Modal com histórico dos jogadores
++ Estatísticas em tempo real
++ Gráficos interativos
++ Responsividade para dispositivos móveis
 
 
 👨‍💻 Autor
+<div align="center">
+João Guilherme Pereira Mendes
 
-Desenvolvido por João Guilherme Pereira Mendes.
+🔗 GitHub:
+<a href="https://github.com/joaoguilherme09" target="_blank">
+github.com/joaoguilherme09
+</a>
 
-🔗 GitHub: https://github.com/joaoguilherme09
+</div>
+<div align="center">
+⭐ Objetivo do Projeto
 
-⭐ Objetivo
+Projeto desenvolvido com foco em prática de desenvolvimento front-end, manipulação de dados e criação de interfaces modernas voltadas para eSports.
 
-Este projeto foi criado com foco em prática de desenvolvimento front-end, organização de dados e criação de interfaces modernas voltadas para eSports.
+</div> ```
