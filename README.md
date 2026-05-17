@@ -61,19 +61,23 @@ Sistema web desenvolvido para registrar, organizar e exibir o histórico de camp
 + Responsividade para dispositivos móveis
 
 
-👨‍💻 Autor
-<div align="center">
-João Guilherme Pereira Mendes
+# 👨‍💻 Autor
 
-🔗 GitHub:
-<a href="https://github.com/joaoguilherme09" target="_blank">
-github.com/joaoguilherme09
-</a>
+<div align="center">
+
+### João Guilherme Pereira Mendes
+
+🔗 GitHub:  
+[github.com/joaoguilherme09](https://github.com/joaoguilherme09)
 
 </div>
+
+---
+
+# ⭐ Objetivo do Projeto
+
 <div align="center">
-⭐ Objetivo do Projeto
 
 Projeto desenvolvido com foco em prática de desenvolvimento front-end, manipulação de dados e criação de interfaces modernas voltadas para eSports.
 
-</div> ```
+</div>
