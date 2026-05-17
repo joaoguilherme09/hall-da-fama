@@ -1,0 +1,76 @@
+const DATA = {
+  jogadores: [
+    { id: 1, nome: "Kassio" },
+    { id: 2, nome: "Fabricio" },
+    { id: 3, nome: "Yan Guilherme" },
+    { id: 4, nome: "Luiz" },
+    { id: 5, nome: "RyanL" },
+    { id: 6, nome: "ADM Caua" },
+    { id: 7, nome: "PH" },
+    { id: 8, nome: "Arthur" },
+    { id: 9, nome: "ADM Fabricio" },
+    { id: 10, nome: "Joao Henrique" }
+  ],
+
+  campeonatos: [
+    { id: 1, nome: "Copa do Mundo" },
+    { id: 2, nome: "Copa do Mundo de Clubes" },
+    { id: 3, nome: "Champions League" },
+    { id: 4, nome: "Eurocopa" },
+    { id: 5, nome: "Libertadores" },
+    { id: 6, nome: "Copa do Brasil" },
+    { id: 7, nome: "Copa Africana" }
+  ],
+
+  times: [
+    { id: 1,  nome: "Equador" },
+    { id: 2,  nome: "Milan" },
+    { id: 3,  nome: "Paraguai" },
+    { id: 4,  nome: "Flamengo" },
+    { id: 5,  nome: "Sporting" },
+    { id: 6,  nome: "São Paulo" },
+    { id: 7,  nome: "Austrália" },
+    { id: 8,  nome: "Israel" },
+    { id: 9,  nome: "River Plate" },
+    { id: 10, nome: "Fenerbahçe" },
+    { id: 11, nome: "Al Nassr" },
+    { id: 12, nome: "Grêmio" },
+    { id: 13, nome: "México" },
+    { id: 14, nome: "Vasco" },
+    { id: 15, nome: "Bahia" },
+    { id: 16, nome: "Suécia" },
+    { id: 17, nome: "RD Congo" },
+    { id: 18, nome: "Botafogo" },
+    { id: 19, nome: "Frankfurt" },
+    { id: 20, nome: "Arsenal" },
+    { id: 21, nome: "Rússia" },
+    { id: 22, nome: "São Bernardo" }
+  ],
+
+  titulos: [
+    { id: 1,  jogador_id: 1,  campeonato_id: 1, time_id: 1,  edicao: 1,  data: "2025-12-03" },
+    { id: 2,  jogador_id: 1,  campeonato_id: 2, time_id: 2,  edicao: 1,  data: "2025-12-08" },
+    { id: 3,  jogador_id: 2,  campeonato_id: 1, time_id: 3,  edicao: 2,  data: "2025-12-15" },
+    { id: 4,  jogador_id: 3,  campeonato_id: 2, time_id: 4,  edicao: 2,  data: "2025-12-20" },
+    { id: 5,  jogador_id: 1,  campeonato_id: 3, time_id: 5,  edicao: 1,  data: "2025-12-25" },
+    { id: 6,  jogador_id: 1,  campeonato_id: 2, time_id: 6,  edicao: 3,  data: "2025-12-29" },
+    { id: 7,  jogador_id: 4,  campeonato_id: 1, time_id: 7,  edicao: 3,  data: "2026-01-05" },
+    { id: 8,  jogador_id: 5,  campeonato_id: 4, time_id: 8,  edicao: 1,  data: "2026-01-11" },
+    { id: 9,  jogador_id: 6,  campeonato_id: 5, time_id: 9,  edicao: 1,  data: "2026-01-16" },
+    { id: 10, jogador_id: 3,  campeonato_id: 3, time_id: 10, edicao: 2,  data: "2026-01-23" },
+    { id: 11, jogador_id: 1,  campeonato_id: 2, time_id: 11, edicao: 4,  data: "2026-01-29" },
+    { id: 12, jogador_id: 7,  campeonato_id: 5, time_id: 12, edicao: 2,  data: "2026-02-06" },
+    { id: 13, jogador_id: 5,  campeonato_id: 1, time_id: 13, edicao: 4,  data: "2026-02-14" },
+    { id: 14, jogador_id: 7,  campeonato_id: 5, time_id: 14, edicao: 3,  data: "2026-02-20" },
+    { id: 15, jogador_id: 8,  campeonato_id: 6, time_id: 15, edicao: 1,  data: "2026-02-28" },
+    { id: 16, jogador_id: 6,  campeonato_id: 3, time_id: 2,  edicao: 3,  data: "2026-03-07" },
+    { id: 17, jogador_id: 7,  campeonato_id: 4, time_id: 16, edicao: 2,  data: "2026-03-18" },
+    { id: 18, jogador_id: 9,  campeonato_id: 7, time_id: 17, edicao: 1,  data: "2026-03-25" },
+    { id: 19, jogador_id: 6,  campeonato_id: 5, time_id: 18, edicao: 4,  data: "2026-04-02" },
+    { id: 20, jogador_id: 7,  campeonato_id: 3, time_id: 19, edicao: 4,  data: "2026-04-11" },
+    { id: 21, jogador_id: 2,  campeonato_id: 2, time_id: 20, edicao: 5,  data: "2026-04-18" },
+    { id: 22, jogador_id: 7,  campeonato_id: 3, time_id: 19, edicao: 5,  data: "2026-04-27" },
+    { id: 23, jogador_id: 10, campeonato_id: 1, time_id: 21, edicao: 5,  data: "2026-05-06" },
+    { id: 24, jogador_id: 7,  campeonato_id: 6, time_id: 22, edicao: 2,  data: "2026-05-14" }
+  ]
+}

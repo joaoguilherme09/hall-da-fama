@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Hall da Fama · ORG ON CAMPS eFootball</title>
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Barlow+Condensed:wght@400;600;700&family=Barlow:wght@300;400;500&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+    
+    <div class="top-credit">
+        <a href="https://github.com/joaoguilherme09" target="_blank">
+            Desenvolvido por João Guilherme
+        </a>
+    </div>
+
+  <!-- ─── NAV ─────────────────────────────────────────── -->
+  <nav>
+    <a class="nav-logo" href="#">
+      <img src="assets/logo.png" height="44" alt="ON Esports" />
+    </a>
+    <ul class="nav-links">
+      <li><a href="#podium">Pódio</a></li>
+      <li><a href="#champions">Campeões</a></li>
+      <li><a href="#ranking">Ranking</a></li>
+      <li><a href="#graficos">Gráficos</a></li>
+    </ul>
+  </nav>
+
+  <!-- ─── HERO ─────────────────────────────────────────── -->
+  <section id="hero">
+    <div class="hero-glow"></div>
+    <div class="hero-lines"></div>
+    <img src="assets/logo.png" height="50" alt="ON Esports" style="margin-bottom:2rem;animation:fadeUp 0.6s ease both;" />
+    <div class="hero-badge">⚽ eFootball · Campeonatos Semanais</div>
+    <h1 class="hero-title">
+      Hall da Fama
+      <span>ORG ON CAMPS</span>
+    </h1>
+    <p class="hero-sub">Os maiores campeões do eFootball</p>
+    <div class="stats-bar" id="statsBar"></div>
+  </section>
+
+  <!-- ─── BANNER ───────────────────────────────────────── -->
+  <div class="banner-wrap">
+    <img src="assets/banner.png" alt="ON Esports Banner" class="banner-img" />
+  </div>
+
+  <!-- ─── PODIUM ───────────────────────────────────────── -->
+  <section id="podium">
+    <div class="section-header">
+      <span class="section-label">Os maiores</span>
+      <h2 class="section-title">Pódio dos Campeões</h2>
+    </div>
+    <div class="divider"></div>
+    <div class="podium-stage" id="podiumStage"></div>
+  </section>
+
+  <!-- ─── CHAMPIONS ────────────────────────────────────── -->
+  <section id="champions">
+    <div class="section-header">
+      <span class="section-label">Histórico completo</span>
+      <h2 class="section-title">Lista de Campeões</h2>
+    </div>
+    <div class="divider"></div>
+
+    <div class="filters-row">
+      <input class="filter-input" id="searchInput" type="text" placeholder="Buscar jogador, time ou campeonato…" />
+      <select class="filter-select" id="campFilter">
+        <option value="">Todos os campeonatos</option>
+      </select>
+      <select class="filter-select" id="playerFilter">
+        <option value="">Todos os jogadores</option>
+      </select>
+      <button class="btn-reset" id="resetFilters">Limpar filtros</button>
+    </div>
+
+    <div class="table-wrap">
+      <table>
+        <thead>
+          <tr>
+            <th data-sort="edicao">Edição</th>
+            <th data-sort="player">Jogador</th>
+            <th data-sort="camp">Campeonato</th>
+            <th data-sort="team">Time</th>
+            <th data-sort="date">Data</th>
+            <th data-sort="titles" style="text-align:center">Títulos</th>
+          </tr>
+        </thead>
+        <tbody id="championsBody"></tbody>
+      </table>
+    </div>
+    <div class="pagination" id="pagination"></div>
+  </section>
+
+  <!-- ─── RANKING ──────────────────────────────────────── -->
+  <section id="ranking">
+    <div class="section-header">
+      <span class="section-label">Classificação geral</span>
+      <h2 class="section-title">Ranking Histórico</h2>
+    </div>
+    <div class="divider"></div>
+    <div class="ranking-grid" id="rankingGrid"></div>
+  </section>
+
+  <!-- ─── GRÁFICOS ─────────────────────────────────────── -->
+  <section id="graficos">
+    <div class="section-header">
+      <span class="section-label">Estatísticas visuais</span>
+      <h2 class="section-title">Gráficos</h2>
+    </div>
+    <div class="divider"></div>
+    <div class="charts-grid">
+      <div class="chart-card"><canvas id="chartJogadores"></canvas></div>
+      <div class="chart-card"><canvas id="chartCampeonatos"></canvas></div>
+      <div class="chart-card chart-wide"><canvas id="chartTimes"></canvas></div>
+      <div class="chart-card chart-wide"><canvas id="chartEvolucao"></canvas></div>
+    </div>
+  </section>
+
+  <!-- ─── FOOTER ───────────────────────────────────────── -->
+  <footer>
+  <p>
+    Hall da Fama · <span>ORG ON CAMPS eFootball</span>
+  </p>
+
+  <a 
+    href="https://github.com/joaoguilherme09"
+    target="_blank"
+    class="dev-credit"
+  >
+    Desenvolvido por João Guilherme
+  </a>
+</footer>
+
+  <!-- ─── MODAL ────────────────────────────────────────── -->
+  <div class="modal-overlay" id="modalOverlay">
+    <div class="modal" id="modal">
+      <div class="modal-header">
+        <div>
+          <div class="modal-player-name" id="modalName"></div>
+          <div class="modal-player-rank" id="modalRank"></div>
+        </div>
+        <button class="modal-close" id="modalClose">✕</button>
+      </div>
+      <div class="modal-stats" id="modalStats"></div>
+      <div class="modal-body" id="modalBody"></div>
+    </div>
+  </div>
+
+  <!-- ─── SCRIPTS ──────────────────────────────────────── -->
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <script src="data/data.js"></script>
+  <script src="js/app.js"></script>
+  <script src="js/charts.js"></script>
+
+</body>
+</html>
