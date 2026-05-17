@@ -59,7 +59,7 @@ Sistema web desenvolvido para registrar, organizar e exibir o histórico de camp
 + Estatísticas em tempo real
 + Gráficos interativos
 + Responsividade para dispositivos móveis
-
+```
 
 # 👨‍💻 Autor
 
