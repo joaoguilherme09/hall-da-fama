@@ -420,12 +420,14 @@ nav {
 .table-wrap {
   border: 1px solid var(--border);
   border-radius: 6px;
-  overflow: hidden;
+  overflow-x: auto;
+  overflow-y: hidden;
 }
 
 table {
   width: 100%;
   border-collapse: collapse;
+  min-width: 700px;
 }
 
 thead tr {
