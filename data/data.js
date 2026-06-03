@@ -45,7 +45,8 @@ const DATA = {
     { id: 20, nome: "Arsenal" },
     { id: 21, nome: "Rússia" },
     { id: 22, nome: "São Bernardo" },
-    { id: 23, nome: "PSG" }
+    { id: 23, nome: "PSG" },
+    { id: 24, nome: "PSV" },
   ],
 
   titulos: [
@@ -73,6 +74,7 @@ const DATA = {
     { id: 22, jogador_id: 7,  campeonato_id: 3, time_id: 19, edicao: 5,  data: "2026-04-27" },
     { id: 23, jogador_id: 10, campeonato_id: 1, time_id: 21, edicao: 5,  data: "2026-05-06" },
     { id: 24, jogador_id: 7,  campeonato_id: 6, time_id: 22, edicao: 2,  data: "2026-05-14" },
-    { id: 25, jogador_id: 7,  campeonato_id: 3, time_id: 23, edicao: 2,  data: "2026-05-20" }
+    { id: 25, jogador_id: 7,  campeonato_id: 3, time_id: 23, edicao: 6,  data: "2026-05-20" },
+    { id: 26, jogador_id: 6,  campeonato_id: 3, time_id: 24, edicao: 7,  data: "2026-06-02" }
   ]
 }
