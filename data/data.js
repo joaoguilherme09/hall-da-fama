@@ -11,7 +11,8 @@ const DATA = {
     { id: 9, nome: "ADM Fabricio" },
     { id: 10, nome: "Joao Henrique" },
     { id: 11, nome: "Maycon" },
-    { id: 12, nome: "Pedro" }
+    { id: 12, nome: "Pedro" },
+    { id: 13, nome: "Marcos" }
 
   ],
 
@@ -89,7 +90,8 @@ const DATA = {
     { id: 28, jogador_id: 11, campeonato_id: 1, time_id: 26, edicao: 6,  data: "2026-06-21" },
     { id: 29, jogador_id: 12, campeonato_id: 2, time_id: 27, edicao: 6,  data: "2026-06-27" },
     { id: 30, jogador_id: 7, campeonato_id: 3, time_id: 28, edicao: 8,  data: "2026-07-06" },
-    { id: 31, jogador_id: 8, campeonato_id: 8, time_id: 29, edicao: 1,  data: "2026-07-12" }
+    { id: 31, jogador_id: 8, campeonato_id: 8, time_id: 29, edicao: 1,  data: "2026-07-12" },
+    { id: 32, jogador_id: 13, campeonato_id: 5, time_id: 18, edicao: 6,  data: "2026-07-22" }
   ]
 }
 
