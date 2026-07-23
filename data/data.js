@@ -94,4 +94,3 @@ const DATA = {
     { id: 32, jogador_id: 13, campeonato_id: 5, time_id: 18, edicao: 6,  data: "2026-07-22" }
   ]
 }
-
