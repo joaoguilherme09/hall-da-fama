@@ -58,7 +58,8 @@ const DATA = {
     { id: 27, nome: "Guadalajara" },
     { id: 28, nome: "Celtic" },
     { id: 29, nome: "Holanda" },
-    { id: 30, nome: "Canadá" }
+    { id: 30, nome: "Canadá" },
+    { id: 31, nome: "Alemanha" }
   ],
 
   titulos: [
@@ -94,6 +95,7 @@ const DATA = {
     { id: 30, jogador_id: 7, campeonato_id: 3, time_id: 28, edicao: 8,  data: "2026-07-06" },
     { id: 31, jogador_id: 8, campeonato_id: 8, time_id: 29, edicao: 1,  data: "2026-07-12" },
     { id: 32, jogador_id: 13, campeonato_id: 5, time_id: 18, edicao: 6,  data: "2026-07-22" },
-    { id: 33, jogador_id: 8, campeonato_id: 9, time_id: 30, edicao: 1,  data: "2026-07-30" }
+    { id: 33, jogador_id: 8, campeonato_id: 9, time_id: 30, edicao: 1,  data: "2026-07-30" },
+    { id: 34, jogador_id: 6, campeonato_id: 4, time_id: 30, edicao: 3,  data: "2026-08-07" }
   ]
 }
