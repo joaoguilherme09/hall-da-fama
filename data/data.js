@@ -96,6 +96,6 @@ const DATA = {
     { id: 31, jogador_id: 8, campeonato_id: 8, time_id: 29, edicao: 1,  data: "2026-07-12" },
     { id: 32, jogador_id: 13, campeonato_id: 5, time_id: 18, edicao: 6,  data: "2026-07-22" },
     { id: 33, jogador_id: 8, campeonato_id: 9, time_id: 30, edicao: 1,  data: "2026-07-30" },
-    { id: 34, jogador_id: 6, campeonato_id: 4, time_id: 30, edicao: 3,  data: "2026-08-07" }
+    { id: 34, jogador_id: 6, campeonato_id: 4, time_id: 31, edicao: 3,  data: "2026-08-07" }
   ]
 }
