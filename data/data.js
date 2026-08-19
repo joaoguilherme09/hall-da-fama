@@ -25,7 +25,8 @@ const DATA = {
     { id: 6, nome: "Copa do Brasil" },
     { id: 7, nome: "Copa Africana" },
     { id: 8, nome: "UEFA Nations League" },
-    { id: 9, nome: "Copa América" }
+    { id: 9, nome: "Copa América" },
+    { id: 10, nome: "Brasileirão" }
   ],
 
   times: [
@@ -59,7 +60,8 @@ const DATA = {
     { id: 28, nome: "Celtic" },
     { id: 29, nome: "Holanda" },
     { id: 30, nome: "Canadá" },
-    { id: 31, nome: "Alemanha" }
+    { id: 31, nome: "Alemanha" },
+    { id: 32, nome: "Fluminense" }
   ],
 
   titulos: [
@@ -96,6 +98,7 @@ const DATA = {
     { id: 31, jogador_id: 8, campeonato_id: 8, time_id: 29, edicao: 1,  data: "2026-07-12" },
     { id: 32, jogador_id: 13, campeonato_id: 5, time_id: 18, edicao: 6,  data: "2026-07-22" },
     { id: 33, jogador_id: 8, campeonato_id: 9, time_id: 30, edicao: 1,  data: "2026-07-30" },
-    { id: 34, jogador_id: 6, campeonato_id: 4, time_id: 31, edicao: 3,  data: "2026-08-07" }
+    { id: 34, jogador_id: 6, campeonato_id: 4, time_id: 31, edicao: 3,  data: "2026-08-07" },
+    { id: 35, jogador_id: 10, campeonato_id: 10, time_id: 32, edicao: 1,  data: "2026-08-16" }
   ]
 }
