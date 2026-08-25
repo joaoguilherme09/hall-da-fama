@@ -12,7 +12,8 @@ const DATA = {
     { id: 10, nome: "Joao Henrique" },
     { id: 11, nome: "Maycon" },
     { id: 12, nome: "Pedro" },
-    { id: 13, nome: "Marcos" }
+    { id: 13, nome: "Marcos" },
+    { id: 14, nome: "Kauã Felipe" }
 
   ],
 
@@ -61,7 +62,8 @@ const DATA = {
     { id: 29, nome: "Holanda" },
     { id: 30, nome: "Canadá" },
     { id: 31, nome: "Alemanha" },
-    { id: 32, nome: "Fluminense" }
+    { id: 32, nome: "Fluminense" },
+    { id: 33, nome: "Roma" }
   ],
 
   titulos: [
@@ -99,6 +101,7 @@ const DATA = {
     { id: 32, jogador_id: 13, campeonato_id: 5, time_id: 18, edicao: 6,  data: "2026-07-22" },
     { id: 33, jogador_id: 8, campeonato_id: 9, time_id: 30, edicao: 1,  data: "2026-07-30" },
     { id: 34, jogador_id: 6, campeonato_id: 4, time_id: 31, edicao: 3,  data: "2026-08-07" },
-    { id: 35, jogador_id: 10, campeonato_id: 10, time_id: 32, edicao: 1,  data: "2026-08-16" }
+    { id: 35, jogador_id: 10, campeonato_id: 10, time_id: 32, edicao: 1,  data: "2026-08-16" },
+    { id: 36, jogador_id: 14, campeonato_id: 3, time_id: 33, edicao: 9,  data: "2026-08-23" }
   ]
 }
