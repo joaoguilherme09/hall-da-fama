@@ -27,7 +27,8 @@ const DATA = {
     { id: 7, nome: "Copa Africana" },
     { id: 8, nome: "UEFA Nations League" },
     { id: 9, nome: "Copa América" },
-    { id: 10, nome: "Brasileirão" }
+    { id: 10, nome: "Brasileirão" },
+    { id: 11, nome: "Champions League Asiatica" }
   ],
 
   times: [
@@ -63,7 +64,9 @@ const DATA = {
     { id: 30, nome: "Canadá" },
     { id: 31, nome: "Alemanha" },
     { id: 32, nome: "Fluminense" },
-    { id: 33, nome: "Roma" }
+    { id: 33, nome: "Roma" },
+    { id: 34, nome: "Vissel Kobe" }
+
   ],
 
   titulos: [
@@ -103,6 +106,7 @@ const DATA = {
     { id: 34, jogador_id: 6, campeonato_id: 4, time_id: 31, edicao: 3,  data: "2026-08-07" },
     { id: 35, jogador_id: 10, campeonato_id: 10, time_id: 32, edicao: 1,  data: "2026-08-16" },
     { id: 36, jogador_id: 14, campeonato_id: 3, time_id: 33, edicao: 9,  data: "2026-08-23" },
-    { id: 37, jogador_id: 6, campeonato_id: 1, time_id: 31, edicao: 7,  data: "2026-08-31" }
+    { id: 37, jogador_id: 6, campeonato_id: 1, time_id: 31, edicao: 7,  data: "2026-08-31" },
+    { id: 38, jogador_id: 6, campeonato_id: 11, time_id: 34, edicao: 1,  data: "2026-09-06" }
   ]
 }
