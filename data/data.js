@@ -67,7 +67,8 @@ const DATA = {
     { id: 32, nome: "Fluminense" },
     { id: 33, nome: "Roma" },
     { id: 34, nome: "Vissel Kobe" },
-    { id: 35, nome: "Novorizontino" }
+    { id: 35, nome: "Novorizontino" },
+    { id: 36, nome: "Palmeiras" }
 
   ],
 
@@ -110,6 +111,7 @@ const DATA = {
     { id: 36, jogador_id: 14, campeonato_id: 3, time_id: 33, edicao: 9,  data: "2026-08-23" },
     { id: 37, jogador_id: 6, campeonato_id: 1, time_id: 31, edicao: 7,  data: "2026-08-31" },
     { id: 38, jogador_id: 6, campeonato_id: 11, time_id: 34, edicao: 1,  data: "2026-09-06" },
-    { id: 39, jogador_id: 15, campeonato_id: 10, time_id: 35, edicao: 2,  data: "2026-09-12" }
+    { id: 39, jogador_id: 15, campeonato_id: 10, time_id: 35, edicao: 2,  data: "2026-09-12" },
+    { id: 40, jogador_id: 14, campeonato_id: 2, time_id: 36, edicao: 7,  data: "2026-09-18" }
   ]
 }
