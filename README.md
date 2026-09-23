@@ -78,6 +78,6 @@ Sistema web desenvolvido para registrar, organizar e exibir o histórico de camp
 
 <div align="center">
 
-Projeto desenvolvido com foco em prática de desenvolvimento front-end, manipulação de dados e criação de interfaces modernas voltadas para eSports.
+Projeto desenvolvido com foco em prática de desenvolvimento front-end, manipulação de dados e criação de interfaces modernas voltadas para organizar estatísticas e contagens de títulos eSports de Efootball da organização 'ORG ON CAMPS'.
 
 </div>
