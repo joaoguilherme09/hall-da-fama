@@ -7,18 +7,42 @@
 
 /* ─── VARIÁVEIS ─────────────────────────────────────── */
 :root {
+  /* Cores de destaque */
   --gold:    #D4A017;
   --gold2:   #F5C842;
   --silver:  #A8B2C0;
   --bronze:  #CD7F32;
-  --bg:      #080A0F;
-  --bg2:     #0D1018;
-  --bg3:     #131820;
-  --surface: #1A1F2E;
-  --border:  rgba(212,160,23,0.18);
+  --accent:  #D4A017;
+
+  /* As mesmas cores em formato "R,G,B" — usadas nas transparências:
+     rgba(var(--gold-rgb), 0.2) = dourado com 20% de opacidade */
+  --gold-rgb:   212,160,23;
+  --silver-rgb: 168,178,192;
+  --bronze-rgb: 205,127,50;
+
+  /* Fundos */
+  --bg:          #080A0F;
+  --bg2:         #0D1018;
+  --bg3:         #131820;
+  --surface:     #1A1F2E;
+  --surface-rgb: 26,31,46;
+  --nav-bg:      rgba(8,10,15,0.85);
+  --topbar-bg:   rgba(0,0,0,0.45);
+  --overlay:     rgba(0,0,0,0.85);
+
+  /* Textos */
+  --heading: #FFFFFF;   /* títulos e nomes em destaque */
   --text:    #E8ECF0;
   --muted:   #6B7585;
-  --accent:  #D4A017;
+
+  /* Bordas */
+  --border:      rgba(var(--gold-rgb),0.18);
+  --border-soft: rgba(var(--gold-rgb),0.06);
+
+  /* Fontes */
+  --font-display: 'Bebas Neue', Impact, sans-serif;
+  --font-cond:    'Barlow Condensed', sans-serif;
+  --font-body:    'Barlow', sans-serif;
 }
 
 /* ─── RESET ─────────────────────────────────────────── */
@@ -33,7 +57,7 @@ html { scroll-behavior: smooth; }
 body {
   background: var(--bg);
   color: var(--text);
-  font-family: 'Barlow', sans-serif;
+  font-family: var(--font-body);
   font-weight: 400;
   overflow-x: hidden;
 }
@@ -71,13 +95,13 @@ nav {
   justify-content: space-between;
   padding: 0 2.5rem;
   height: 64px;
-  background: rgba(8,10,15,0.85);
+  background: var(--nav-bg);
   backdrop-filter: blur(16px);
   border-bottom: 1px solid var(--border);
 }
 
 .nav-logo {
-  font-family: 'Bebas Neue', cursive;
+  font-family: var(--font-display);
   font-size: 1.4rem;
   letter-spacing: 0.12em;
   color: var(--gold);
@@ -91,7 +115,7 @@ nav {
 }
 
 .nav-links a {
-  font-family: 'Barlow Condensed', sans-serif;
+  font-family: var(--font-cond);
   font-size: 0.85rem;
   font-weight: 600;
   letter-spacing: 0.1em;
@@ -123,7 +147,7 @@ nav {
   transform: translate(-50%, -60%);
   width: 700px;
   height: 700px;
-  background: radial-gradient(ellipse, rgba(212,160,23,0.12) 0%, transparent 70%);
+  background: radial-gradient(ellipse, rgba(var(--gold-rgb),0.12) 0%, transparent 70%);
   pointer-events: none;
 }
 
@@ -131,8 +155,8 @@ nav {
   position: absolute;
   inset: 0;
   background-image:
-    linear-gradient(rgba(212,160,23,0.04) 1px, transparent 1px),
-    linear-gradient(90deg, rgba(212,160,23,0.04) 1px, transparent 1px);
+    linear-gradient(rgba(var(--gold-rgb),0.04) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(var(--gold-rgb),0.04) 1px, transparent 1px);
   background-size: 60px 60px;
   pointer-events: none;
 }
@@ -144,8 +168,8 @@ nav {
   padding: 0.35rem 1rem;
   border: 1px solid var(--border);
   border-radius: 2px;
-  background: rgba(212,160,23,0.06);
-  font-family: 'Barlow Condensed', sans-serif;
+  background: rgba(var(--gold-rgb),0.06);
+  font-family: var(--font-cond);
   font-size: 0.75rem;
   font-weight: 600;
   letter-spacing: 0.2em;
@@ -156,11 +180,11 @@ nav {
 }
 
 .hero-title {
-  font-family: 'Bebas Neue', cursive;
+  font-family: var(--font-display);
   font-size: clamp(3.5rem, 10vw, 8rem);
   line-height: 0.92;
   letter-spacing: 0.04em;
-  color: #fff;
+  color: var(--heading);
   margin-bottom: 0.4rem;
   animation: fadeUp 0.6s 0.1s ease both;
 }
@@ -174,7 +198,7 @@ nav {
 }
 
 .hero-sub {
-  font-family: 'Barlow Condensed', sans-serif;
+  font-family: var(--font-cond);
   font-size: clamp(1rem, 2.5vw, 1.4rem);
   font-weight: 400;
   letter-spacing: 0.25em;
@@ -189,7 +213,7 @@ nav {
   display: flex;
   gap: 0;
   border: 1px solid var(--border);
-  background: rgba(26,31,46,0.6);
+  background: rgba(var(--surface-rgb),0.6);
   backdrop-filter: blur(12px);
   border-radius: 4px;
   overflow: hidden;
@@ -206,7 +230,7 @@ nav {
 .stat-item:last-child { border-right: none; }
 
 .stat-num {
-  font-family: 'Bebas Neue', cursive;
+  font-family: var(--font-display);
   font-size: 2.2rem;
   color: var(--gold);
   line-height: 1;
@@ -214,7 +238,7 @@ nav {
 }
 
 .stat-label {
-  font-family: 'Barlow Condensed', sans-serif;
+  font-family: var(--font-cond);
   font-size: 0.7rem;
   font-weight: 600;
   letter-spacing: 0.15em;
@@ -231,7 +255,7 @@ nav {
 }
 
 .section-label {
-  font-family: 'Barlow Condensed', sans-serif;
+  font-family: var(--font-cond);
   font-size: 0.72rem;
   font-weight: 600;
   letter-spacing: 0.25em;
@@ -242,10 +266,10 @@ nav {
 }
 
 .section-title {
-  font-family: 'Bebas Neue', cursive;
+  font-family: var(--font-display);
   font-size: clamp(2rem, 5vw, 3.5rem);
   letter-spacing: 0.06em;
-  color: #fff;
+  color: var(--heading);
   line-height: 1;
 }
 
@@ -300,18 +324,18 @@ nav {
 .podium-slot:hover .podium-card { filter: brightness(1.15); }
 
 .podium-slot.first .podium-card {
-  background: linear-gradient(160deg, rgba(212,160,23,0.18), rgba(212,160,23,0.05));
-  border-color: rgba(212,160,23,0.5);
+  background: linear-gradient(160deg, rgba(var(--gold-rgb),0.18), rgba(var(--gold-rgb),0.05));
+  border-color: rgba(var(--gold-rgb),0.5);
 }
 
 .podium-slot.second .podium-card {
-  background: linear-gradient(160deg, rgba(168,178,192,0.12), rgba(168,178,192,0.03));
-  border-color: rgba(168,178,192,0.3);
+  background: linear-gradient(160deg, rgba(var(--silver-rgb),0.12), rgba(var(--silver-rgb),0.03));
+  border-color: rgba(var(--silver-rgb),0.3);
 }
 
 .podium-slot.third .podium-card {
-  background: linear-gradient(160deg, rgba(205,127,50,0.12), rgba(205,127,50,0.03));
-  border-color: rgba(205,127,50,0.3);
+  background: linear-gradient(160deg, rgba(var(--bronze-rgb),0.12), rgba(var(--bronze-rgb),0.03));
+  border-color: rgba(var(--bronze-rgb),0.3);
 }
 
 .podium-crown {
@@ -321,15 +345,15 @@ nav {
 }
 
 .podium-name {
-  font-family: 'Bebas Neue', cursive;
+  font-family: var(--font-display);
   font-size: 1.5rem;
   letter-spacing: 0.06em;
-  color: #fff;
+  color: var(--heading);
   display: block;
 }
 
 .podium-titles {
-  font-family: 'Barlow Condensed', sans-serif;
+  font-family: var(--font-cond);
   font-size: 0.8rem;
   font-weight: 600;
   letter-spacing: 0.15em;
@@ -350,12 +374,12 @@ nav {
   border-radius: 0 0 4px 4px;
 }
 
-.podium-slot.first  .podium-block { height: 90px; background: linear-gradient(180deg, rgba(212,160,23,0.4), rgba(212,160,23,0.15)); border: 1px solid rgba(212,160,23,0.4); border-top: none; }
-.podium-slot.second .podium-block { height: 60px; background: linear-gradient(180deg, rgba(168,178,192,0.3), rgba(168,178,192,0.08)); border: 1px solid rgba(168,178,192,0.25); border-top: none; }
-.podium-slot.third  .podium-block { height: 40px; background: linear-gradient(180deg, rgba(205,127,50,0.3), rgba(205,127,50,0.08)); border: 1px solid rgba(205,127,50,0.25); border-top: none; }
+.podium-slot.first  .podium-block { height: 90px; background: linear-gradient(180deg, rgba(var(--gold-rgb),0.4), rgba(var(--gold-rgb),0.15)); border: 1px solid rgba(var(--gold-rgb),0.4); border-top: none; }
+.podium-slot.second .podium-block { height: 60px; background: linear-gradient(180deg, rgba(var(--silver-rgb),0.3), rgba(var(--silver-rgb),0.08)); border: 1px solid rgba(var(--silver-rgb),0.25); border-top: none; }
+.podium-slot.third  .podium-block { height: 40px; background: linear-gradient(180deg, rgba(var(--bronze-rgb),0.3), rgba(var(--bronze-rgb),0.08)); border: 1px solid rgba(var(--bronze-rgb),0.25); border-top: none; }
 
 .podium-rank {
-  font-family: 'Bebas Neue', cursive;
+  font-family: var(--font-display);
   font-size: 1.6rem;
   letter-spacing: 0.05em;
 }
@@ -384,7 +408,7 @@ nav {
   background: var(--surface);
   border: 1px solid var(--border);
   color: var(--text);
-  font-family: 'Barlow', sans-serif;
+  font-family: var(--font-body);
   font-size: 0.88rem;
   padding: 0.6rem 1rem;
   border-radius: 4px;
@@ -403,7 +427,7 @@ nav {
   background: transparent;
   border: 1px solid var(--border);
   color: var(--muted);
-  font-family: 'Barlow Condensed', sans-serif;
+  font-family: var(--font-cond);
   font-size: 0.8rem;
   font-weight: 600;
   letter-spacing: 0.12em;
@@ -436,7 +460,7 @@ thead tr {
 }
 
 th {
-  font-family: 'Barlow Condensed', sans-serif;
+  font-family: var(--font-cond);
   font-size: 0.72rem;
   font-weight: 600;
   letter-spacing: 0.18em;
@@ -454,14 +478,14 @@ th:hover  { color: var(--gold); }
 th.sorted { color: var(--gold); }
 
 tbody tr {
-  border-bottom: 1px solid rgba(212,160,23,0.06);
+  border-bottom: 1px solid var(--border-soft);
   transition: background 0.15s;
 }
 
 tbody tr:last-child { border-bottom: none; }
 
 tbody tr:hover {
-  background: rgba(212,160,23,0.04);
+  background: rgba(var(--gold-rgb),0.04);
   cursor: pointer;
 }
 
@@ -472,10 +496,10 @@ td {
 }
 
 .td-player {
-  font-family: 'Barlow Condensed', sans-serif;
+  font-family: var(--font-cond);
   font-size: 1rem;
   font-weight: 700;
-  color: #fff;
+  color: var(--heading);
   letter-spacing: 0.04em;
 }
 
@@ -491,10 +515,10 @@ td {
   width: 28px;
   height: 28px;
   border-radius: 50%;
-  font-family: 'Bebas Neue', cursive;
+  font-family: var(--font-display);
   font-size: 1rem;
-  background: rgba(212,160,23,0.12);
-  border: 1px solid rgba(212,160,23,0.3);
+  background: rgba(var(--gold-rgb),0.12);
+  border: 1px solid rgba(var(--gold-rgb),0.3);
   color: var(--gold);
 }
 
@@ -511,7 +535,7 @@ td {
   background: var(--surface);
   border: 1px solid var(--border);
   color: var(--muted);
-  font-family: 'Barlow Condensed', sans-serif;
+  font-family: var(--font-cond);
   font-size: 0.85rem;
   font-weight: 600;
   width: 36px;
@@ -528,7 +552,7 @@ td {
 .page-btn.active {
   border-color: var(--gold);
   color: var(--gold);
-  background: rgba(212,160,23,0.08);
+  background: rgba(var(--gold-rgb),0.08);
 }
 
 /* ─── RANKING ────────────────────────────────────────── */
@@ -558,12 +582,12 @@ td {
 }
 
 .rank-row:hover {
-  border-color: rgba(212,160,23,0.4);
+  border-color: rgba(var(--gold-rgb),0.4);
   transform: translateX(4px);
 }
 
 .rank-pos {
-  font-family: 'Bebas Neue', cursive;
+  font-family: var(--font-display);
   font-size: 1.4rem;
   width: 32px;
   text-align: center;
@@ -578,10 +602,10 @@ td {
 .rank-info { flex: 1; min-width: 0; }
 
 .rank-name {
-  font-family: 'Barlow Condensed', sans-serif;
+  font-family: var(--font-cond);
   font-size: 1rem;
   font-weight: 700;
-  color: #fff;
+  color: var(--heading);
   letter-spacing: 0.04em;
   white-space: nowrap;
   overflow: hidden;
@@ -595,7 +619,7 @@ td {
 }
 
 .rank-titles {
-  font-family: 'Bebas Neue', cursive;
+  font-family: var(--font-display);
   font-size: 1.6rem;
   color: var(--gold);
   flex-shrink: 0;
@@ -627,7 +651,7 @@ td {
 .modal-overlay {
   position: fixed;
   inset: 0;
-  background: rgba(0,0,0,0.85);
+  background: var(--overlay);
   backdrop-filter: blur(8px);
   z-index: 200;
   display: flex;
@@ -668,15 +692,15 @@ td {
 }
 
 .modal-player-name {
-  font-family: 'Bebas Neue', cursive;
+  font-family: var(--font-display);
   font-size: 2.5rem;
   letter-spacing: 0.06em;
-  color: #fff;
+  color: var(--heading);
   line-height: 1;
 }
 
 .modal-player-rank {
-  font-family: 'Barlow Condensed', sans-serif;
+  font-family: var(--font-cond);
   font-size: 0.78rem;
   font-weight: 600;
   letter-spacing: 0.15em;
@@ -719,7 +743,7 @@ td {
 .modal-stat:last-child { border-right: none; }
 
 .modal-stat-num {
-  font-family: 'Bebas Neue', cursive;
+  font-family: var(--font-display);
   font-size: 2rem;
   color: var(--gold);
   display: block;
@@ -727,7 +751,7 @@ td {
 }
 
 .modal-stat-label {
-  font-family: 'Barlow Condensed', sans-serif;
+  font-family: var(--font-cond);
   font-size: 0.68rem;
   font-weight: 600;
   letter-spacing: 0.15em;
@@ -740,7 +764,7 @@ td {
 .modal-body { padding: 1.5rem 2rem 2rem; }
 
 .modal-section-title {
-  font-family: 'Barlow Condensed', sans-serif;
+  font-family: var(--font-cond);
   font-size: 0.72rem;
   font-weight: 600;
   letter-spacing: 0.2em;
@@ -769,7 +793,7 @@ td {
 }
 
 .tl-date {
-  font-family: 'Barlow Condensed', sans-serif;
+  font-family: var(--font-cond);
   font-size: 0.78rem;
   font-weight: 600;
   color: var(--muted);
@@ -778,7 +802,7 @@ td {
 }
 
 .tl-camp {
-  font-family: 'Barlow Condensed', sans-serif;
+  font-family: var(--font-cond);
   font-size: 0.92rem;
   font-weight: 700;
   color: var(--gold);
@@ -799,10 +823,10 @@ td {
 
 .team-pill {
   padding: 0.3rem 0.8rem;
-  background: rgba(212,160,23,0.08);
-  border: 1px solid rgba(212,160,23,0.2);
+  background: rgba(var(--gold-rgb),0.08);
+  border: 1px solid rgba(var(--gold-rgb),0.2);
   border-radius: 2px;
-  font-family: 'Barlow Condensed', sans-serif;
+  font-family: var(--font-cond);
   font-size: 0.82rem;
   font-weight: 600;
   color: var(--gold);
@@ -813,7 +837,7 @@ footer {
   border-top: 1px solid var(--border);
   padding: 2rem;
   text-align: center;
-  font-family: 'Barlow Condensed', sans-serif;
+  font-family: var(--font-cond);
   font-size: 0.78rem;
   font-weight: 600;
   letter-spacing: 0.15em;
@@ -823,7 +847,68 @@ footer {
 
 footer span { color: var(--gold); }
 
+/* ─── BANNER ─────────────────────────────────────────── */
+.banner-wrap {
+  display: flex;
+  justify-content: center;
+  padding: 2rem 0;
+}
+
+.banner-img {
+  width: 70%;
+  max-width: 900px;
+  border-radius: 8px;
+}
+
+/* ─── CRÉDITOS ───────────────────────────────────────── */
+.dev-credit {
+  display: inline-block;
+  margin-top: 0.8rem;
+  font-family: var(--font-cond);
+  font-size: 0.8rem;
+  font-weight: 600;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--muted);
+  text-decoration: none;
+  transition: 0.2s;
+}
+
+.dev-credit:hover {
+  color: var(--gold);
+  transform: translateY(-2px);
+}
+
+.top-credit {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 28px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--topbar-bg);
+  backdrop-filter: blur(10px);
+  border-bottom: 1px solid rgba(var(--gold-rgb),0.08);
+  z-index: 999;
+}
+
+.top-credit a {
+  font-family: var(--font-cond);
+  font-size: 0.72rem;
+  font-weight: 600;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--muted);
+  text-decoration: none;
+  transition: 0.2s;
+}
+
+.top-credit a:hover { color: var(--gold); }
+
 /* ─── RESPONSIVO ─────────────────────────────────────── */
+/* Fica no final para sempre sobrescrever as regras acima */
 @media (max-width: 768px) {
   nav { padding: 0 1.2rem; }
   .nav-links { display: none; }
@@ -838,77 +923,5 @@ footer span { color: var(--gold); }
   td, th { padding: 0.7rem 0.8rem; }
   .modal { max-height: 95vh; }
   .modal-header, .modal-body { padding: 1.2rem; }
-}
-
-.banner-wrap{
-  display: flex;
-  justify-content: center;
-  padding: 2rem 0;
-}
-
-.banner-img{
-  width: 70%;
-  max-width: 900px;
-  border-radius: 8px;
-}
-
-.dev-credit{
-  display: inline-block;
-  margin-top: 0.8rem;
-
-  font-family: 'Barlow Condensed', sans-serif;
-  font-size: 0.8rem;
-  font-weight: 600;
-  letter-spacing: 0.12em;
-  text-transform: uppercase;
-
-  color: var(--muted);
-  text-decoration: none;
-
-  transition: 0.2s;
-}
-
-.dev-credit:hover{
-  color: var(--gold);
-  transform: translateY(-2px);
-}
-
-/* ─── TOP CREDIT ────────────────────────────────────── */
-
-.top-credit{
-  position: fixed;
-  top: 0;
-  left: 0;
-  right: 0;
-
-  height: 28px;
-
-  display: flex;
-  align-items: center;
-  justify-content: center;
-
-  background: rgba(0,0,0,0.45);
-  backdrop-filter: blur(10px);
-
-  border-bottom: 1px solid rgba(212,160,23,0.08);
-
-  z-index: 999;
-}
-
-.top-credit a{
-  font-family: 'Barlow Condensed', sans-serif;
-  font-size: 0.72rem;
-  font-weight: 600;
-
-  letter-spacing: 0.14em;
-  text-transform: uppercase;
-
-  color: var(--muted);
-  text-decoration: none;
-
-  transition: 0.2s;
-}
-
-.top-credit a:hover{
-  color: var(--gold);
+  .banner-img { width: 92%; }
 }
