@@ -4,16 +4,21 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Hall da Fama · ORG ON CAMPS eFootball</title>
+  <meta name="description" content="Todos os campeões dos campeonatos semanais de eFootball da ORG ON CAMPS: pódio, ranking histórico e estatísticas." />
+  <link rel="icon" type="image/png" href="assets/logo.png" />
+
+  <!-- Preview do link no WhatsApp, Instagram, Discord etc. -->
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://hall-da-fama-theta.vercel.app/" />
+  <meta property="og:title" content="Hall da Fama · ORG ON CAMPS" />
+  <meta property="og:description" content="Os maiores campeões do eFootball da ORG ON CAMPS. Veja o pódio, o ranking e todos os títulos." />
+  <meta property="og:image" content="https://hall-da-fama-theta.vercel.app/assets/banner.png" />
+  <meta name="twitter:card" content="summary_large_image" />
+
   <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Barlow+Condensed:wght@400;600;700&family=Barlow:wght@300;400;500&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="css/style.css" />
 </head>
 <body>
-    
-    <div class="top-credit">
-        <a href="https://github.com/joaoguilherme09" target="_blank">
-            Desenvolvido por João Guilherme
-        </a>
-    </div>
 
   <!-- ─── NAV ─────────────────────────────────────────── -->
   <nav>
@@ -42,9 +47,16 @@
     <div class="stats-bar" id="statsBar"></div>
   </section>
 
-  <!-- ─── BANNER ───────────────────────────────────────── -->
+  <!-- ─── BANNER + CONVITE ─────────────────────────────── -->
+  <!-- TROQUE O LINK DO GRUPO AQUI (e no botão flutuante lá embaixo) -->
   <div class="banner-wrap">
-    <img src="assets/banner.png" alt="ON Esports Banner" class="banner-img" />
+    <a class="banner-link" href="https://chat.whatsapp.com/SEU-LINK-AQUI" target="_blank" rel="noopener">
+      <img src="assets/banner.png" alt="Venha jogar na nossa org" class="banner-img" />
+    </a>
+    <a class="btn-whats" href="https://chat.whatsapp.com/SEU-LINK-AQUI" target="_blank" rel="noopener">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 11.5a8.4 8.4 0 0 1-12.3 7.5L3 21l2-5.7A8.4 8.4 0 1 1 21 11.5z"/></svg>
+      Entrar no grupo do WhatsApp
+    </a>
   </div>
 
   <!-- ─── PODIUM ───────────────────────────────────────── -->
@@ -121,18 +133,16 @@
 
   <!-- ─── FOOTER ───────────────────────────────────────── -->
   <footer>
-  <p>
-    Hall da Fama · <span>ORG ON CAMPS eFootball</span>
-  </p>
+    <p>Hall da Fama · <span>ORG ON CAMPS eFootball</span></p>
+    <a href="https://github.com/joaoguilherme09" target="_blank" rel="noopener" class="dev-credit">
+      Desenvolvido por João Guilherme
+    </a>
+  </footer>
 
-  <a 
-    href="https://github.com/joaoguilherme09"
-    target="_blank"
-    class="dev-credit"
-  >
-    Desenvolvido por João Guilherme
+  <!-- ─── BOTÃO FLUTUANTE DO WHATSAPP ──────────────────── -->
+  <a class="whats-float" href="https://chat.whatsapp.com/SEU-LINK-AQUI" target="_blank" rel="noopener" aria-label="Entrar no grupo do WhatsApp" title="Entrar no grupo do WhatsApp">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 11.5a8.4 8.4 0 0 1-12.3 7.5L3 21l2-5.7A8.4 8.4 0 1 1 21 11.5z"/></svg>
   </a>
-</footer>
 
   <!-- ─── MODAL ────────────────────────────────────────── -->
   <div class="modal-overlay" id="modalOverlay">
@@ -142,7 +152,7 @@
           <div class="modal-player-name" id="modalName"></div>
           <div class="modal-player-rank" id="modalRank"></div>
         </div>
-        <button class="modal-close" id="modalClose">✕</button>
+        <button class="modal-close" id="modalClose" aria-label="Fechar">✕</button>
       </div>
       <div class="modal-stats" id="modalStats"></div>
       <div class="modal-body" id="modalBody"></div>

@@ -13,6 +13,7 @@
   --silver:  #A8B2C0;
   --bronze:  #CD7F32;
   --accent:  #D4A017;
+  --whats:   #25D366;
 
   /* As mesmas cores em formato "R,G,B" — usadas nas transparências:
      rgba(var(--gold-rgb), 0.2) = dourado com 20% de opacidade */
@@ -27,7 +28,6 @@
   --surface:     #1A1F2E;
   --surface-rgb: 26,31,46;
   --nav-bg:      rgba(8,10,15,0.85);
-  --topbar-bg:   rgba(0,0,0,0.45);
   --overlay:     rgba(0,0,0,0.85);
 
   /* Textos */
@@ -235,6 +235,12 @@ nav {
   color: var(--gold);
   line-height: 1;
   display: block;
+}
+
+.stat-num.stat-name {
+  font-size: 1.6rem;
+  line-height: 1.375;   /* mesma altura dos números ao lado */
+  white-space: nowrap;
 }
 
 .stat-label {
@@ -589,15 +595,16 @@ td {
 .rank-pos {
   font-family: var(--font-display);
   font-size: 1.4rem;
-  width: 32px;
+  width: 40px;
   text-align: center;
   flex-shrink: 0;
   color: var(--muted);
 }
 
-.rank-row:nth-child(1) .rank-pos { color: var(--gold); }
-.rank-row:nth-child(2) .rank-pos { color: var(--silver); }
-.rank-row:nth-child(3) .rank-pos { color: var(--bronze); }
+/* Cor pela posição (e não pela ordem), para funcionar com empates */
+.rank-row.pos-1 .rank-pos { color: var(--gold); }
+.rank-row.pos-2 .rank-pos { color: var(--silver); }
+.rank-row.pos-3 .rank-pos { color: var(--bronze); }
 
 .rank-info { flex: 1; min-width: 0; }
 
@@ -879,33 +886,65 @@ footer span { color: var(--gold); }
   transform: translateY(-2px);
 }
 
-.top-credit {
+
+/* ─── WHATSAPP ───────────────────────────────────────── */
+.banner-wrap {
+  flex-direction: column;
+  align-items: center;
+  gap: 1.2rem;
+}
+
+.banner-link {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+}
+
+.btn-whats {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.6rem;
+  padding: 0.85rem 1.8rem;
+  background: var(--whats);
+  color: #fff;
+  font-family: var(--font-cond);
+  font-size: 1rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  text-decoration: none;
+  border-radius: 4px;
+  transition: filter 0.2s, transform 0.2s;
+}
+
+.btn-whats:hover { filter: brightness(1.08); transform: translateY(-2px); }
+.btn-whats svg { width: 20px; height: 20px; flex-shrink: 0; }
+
+.whats-float {
   position: fixed;
-  top: 0;
-  left: 0;
-  right: 0;
-  height: 28px;
+  right: 1.5rem;
+  bottom: calc(1.5rem + env(safe-area-inset-bottom, 0px));
+  z-index: 150;
+  width: 56px;
+  height: 56px;
   display: flex;
   align-items: center;
   justify-content: center;
-  background: var(--topbar-bg);
-  backdrop-filter: blur(10px);
-  border-bottom: 1px solid rgba(var(--gold-rgb),0.08);
-  z-index: 999;
+  background: var(--whats);
+  color: #fff;
+  border-radius: 50%;
+  box-shadow: 0 6px 20px rgba(0,0,0,0.35);
+  transition: transform 0.2s;
 }
 
-.top-credit a {
-  font-family: var(--font-cond);
-  font-size: 0.72rem;
-  font-weight: 600;
-  letter-spacing: 0.14em;
-  text-transform: uppercase;
-  color: var(--muted);
-  text-decoration: none;
-  transition: 0.2s;
-}
+.whats-float:hover { transform: scale(1.08); }
+.whats-float svg { width: 26px; height: 26px; }
 
-.top-credit a:hover { color: var(--gold); }
+.btn-whats:focus-visible,
+.whats-float:focus-visible {
+  outline: 2px solid var(--gold);
+  outline-offset: 3px;
+}
 
 /* ─── RESPONSIVO ─────────────────────────────────────── */
 /* Fica no final para sempre sobrescrever as regras acima */
@@ -924,4 +963,5 @@ footer span { color: var(--gold); }
   .modal { max-height: 95vh; }
   .modal-header, .modal-body { padding: 1.2rem; }
   .banner-img { width: 92%; }
+  .whats-float { right: 1rem; width: 52px; height: 52px; }
 }

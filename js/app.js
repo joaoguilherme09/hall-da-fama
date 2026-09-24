@@ -16,31 +16,42 @@ function fmt(dateStr)  {
 
 // ─── STATS BAR ─────────────────────────────────────────
 function renderStats() {
-  const totalCamps     = DATA.campeonatos.length;
-  const totalJogadores = DATA.jogadores.length;
-  const totalTitulos   = DATA.titulos.length;
   const ranking        = getRanking();
+  const totalCamps     = DATA.campeonatos.length;
+  const totalCampeoes  = ranking.length;          // só quem tem pelo menos 1 título
+  const totalTitulos   = DATA.titulos.length;
   const top            = ranking[0];
 
   document.getElementById('statsBar').innerHTML = `
     <div class="stat-item"><span class="stat-num">${totalTitulos}</span><span class="stat-label">Títulos</span></div>
-    <div class="stat-item"><span class="stat-num">${totalJogadores}</span><span class="stat-label">Campeões </span></div>
+    <div class="stat-item"><span class="stat-num">${totalCampeoes}</span><span class="stat-label">Campeões</span></div>
     <div class="stat-item"><span class="stat-num">${totalCamps}</span><span class="stat-label">Campeonatos</span></div>
-    <div class="stat-item"><span class="stat-num" style="font-size:1.1rem;padding-top:4px">${top.nome}</span><span class="stat-label">Maior Campeão</span></div>
+    <div class="stat-item"><span class="stat-num stat-name">${top.nome}</span><span class="stat-label">Maior Campeão</span></div>
   `;
 }
 
 // ─── RANKING ───────────────────────────────────────────
+// Retorna os jogadores ordenados por títulos, cada um com:
+//   pos      → posição no ranking (empatados dividem a mesma posição: 1, 2, 3, 4, 5, 5, 5...)
+//   empatado → true se outro jogador tem o mesmo número de títulos
 function getRanking() {
   const map = {};
   DATA.titulos.forEach(t => {
-    if (!map[t.jogador_id]) map[t.jogador_id] = 0;
-    map[t.jogador_id]++;
+    map[t.jogador_id] = (map[t.jogador_id] || 0) + 1;
   });
-  return DATA.jogadores
+
+  const lista = DATA.jogadores
     .map(j => ({ ...j, titles: map[j.id] || 0 }))
     .filter(j => j.titles > 0)
-    .sort((a, b) => b.titles - a.titles);
+    .sort((a, b) => b.titles - a.titles || a.nome.localeCompare(b.nome));
+
+  lista.forEach((p, i) => {
+    const anterior = lista[i - 1];
+    p.pos      = (anterior && anterior.titles === p.titles) ? anterior.pos : i + 1;
+    p.empatado = lista.some(o => o !== p && o.titles === p.titles);
+  });
+
+  return lista;
 }
 
 // ─── PODIUM ────────────────────────────────────────────
@@ -49,17 +60,16 @@ function renderPodium() {
   const top3    = ranking.slice(0, 3);
   const order   = top3.length >= 3 ? [top3[1], top3[0], top3[2]] : top3;
   const classes = top3.length >= 3 ? ['second', 'first', 'third'] : ['first', 'second', 'third'];
-  const crowns  = top3.length >= 3 ? ['🥈', '🥇', '🥉'] : ['🥇', '🥈', '🥉'];
-  const ranks   = top3.length >= 3 ? ['2°', '1°', '3°'] : ['1°', '2°', '3°'];
+  const medals  = { 1: '🥇', 2: '🥈', 3: '🥉' };
 
   document.getElementById('podiumStage').innerHTML = order.map((p, i) => `
     <div class="podium-slot ${classes[i]}" onclick="openModal(${p.id})">
       <div class="podium-card">
-        <span class="podium-crown">${crowns[i]}</span>
+        <span class="podium-crown">${medals[p.pos] || '🏅'}</span>
         <span class="podium-name">${p.nome}</span>
         <span class="podium-titles">${p.titles} ${p.titles === 1 ? 'título' : 'títulos'}</span>
       </div>
-      <div class="podium-block"><span class="podium-rank">${ranks[i]}</span></div>
+      <div class="podium-block"><span class="podium-rank">${p.pos}º</span></div>
     </div>
   `).join('');
 }
@@ -167,12 +177,12 @@ function populateFilters() {
 // ─── RANKING GRID ──────────────────────────────────────
 function renderRanking() {
   const ranking = getRanking();
-  document.getElementById('rankingGrid').innerHTML = ranking.map((p, i) => `
-    <div class="rank-row" onclick="openModal(${p.id})">
-      <span class="rank-pos">${i + 1}</span>
+  document.getElementById('rankingGrid').innerHTML = ranking.map(p => `
+    <div class="rank-row ${p.pos <= 3 ? 'pos-' + p.pos : ''}" onclick="openModal(${p.id})">
+      <span class="rank-pos">${p.pos}º</span>
       <div class="rank-info">
         <div class="rank-name">${p.nome}</div>
-        <div class="rank-sub">${p.titles} ${p.titles === 1 ? 'título' : 'títulos'} conquistados</div>
+        <div class="rank-sub">${p.titles} ${p.titles === 1 ? 'título conquistado' : 'títulos conquistados'}</div>
       </div>
       <span class="rank-titles">${p.titles}</span>
     </div>
@@ -182,14 +192,14 @@ function renderRanking() {
 // ─── MODAL ─────────────────────────────────────────────
 function openModal(playerId) {
   const player  = getPlayer(playerId);
-  const ranking = getRanking();
-  const pos     = ranking.findIndex(r => r.id === playerId) + 1;
+  const noRank  = getRanking().find(r => r.id === playerId);
   const titles  = DATA.titulos.filter(t => t.jogador_id === playerId).sort((a, b) => a.data > b.data ? -1 : 1);
   const campsWon  = [...new Set(titles.map(t => t.campeonato_id))].length;
   const teamsUsed = [...new Set(titles.map(t => t.time_id))];
 
   document.getElementById('modalName').textContent = player.nome;
-  document.getElementById('modalRank').textContent = `#${pos} no ranking geral`;
+  document.getElementById('modalRank').textContent =
+    `${noRank.pos}º no ranking geral${noRank.empatado ? ' (empatado)' : ''}`;
 
   document.getElementById('modalStats').innerHTML = `
     <div class="modal-stat"><span class="modal-stat-num">${titles.length}</span><span class="modal-stat-label">Títulos</span></div>
@@ -210,22 +220,28 @@ function openModal(playerId) {
   `).join('');
 
   document.getElementById('modalBody').innerHTML = `
-    <div class="modal-section-title" style="margin-bottom:0.8rem">Linha do Tempo</div>
+    <div class="modal-section-title">Linha do Tempo</div>
     <div class="timeline">${timelineHTML}</div>
-    <div class="modal-section-title" style="margin-bottom:0.8rem">Times utilizados</div>
+    <div class="modal-section-title">Times utilizados</div>
     <div class="teams-used">${teamsHTML}</div>
   `;
 
   document.getElementById('modalOverlay').classList.add('open');
 }
 
-document.getElementById('modalClose').addEventListener('click', () => {
+function closeModal() {
   document.getElementById('modalOverlay').classList.remove('open');
-});
+}
+
+document.getElementById('modalClose').addEventListener('click', closeModal);
 
 document.getElementById('modalOverlay').addEventListener('click', e => {
-  if (e.target === document.getElementById('modalOverlay'))
-    document.getElementById('modalOverlay').classList.remove('open');
+  if (e.target === document.getElementById('modalOverlay')) closeModal();
+});
+
+// Fecha o modal com a tecla Esc
+document.addEventListener('keydown', e => {
+  if (e.key === 'Escape') closeModal();
 });
 
 // ─── EVENTOS DE FILTRO ─────────────────────────────────
