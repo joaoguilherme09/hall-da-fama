@@ -29,7 +29,8 @@ const DATA = {
     { id: 8, nome: "UEFA Nations League" },
     { id: 9, nome: "Copa América" },
     { id: 10, nome: "Brasileirão" },
-    { id: 11, nome: "Champions League Asiatica" }
+    { id: 11, nome: "Champions League Asiatica" },
+    { id: 12, nome: "UEFA Europa League" }
   ],
 
   times: [
@@ -69,7 +70,8 @@ const DATA = {
     { id: 34, nome: "Vissel Kobe" },
     { id: 35, nome: "Novorizontino" },
     { id: 36, nome: "Palmeiras" },
-    { id: 37, nome: "Mirassol" }
+    { id: 37, nome: "Mirassol" },
+    { id: 38, nome: "Atalanta" }
 
   ],
 
@@ -114,6 +116,7 @@ const DATA = {
     { id: 38, jogador_id: 6, campeonato_id: 11, time_id: 34, edicao: 1,  data: "2026-09-06" },
     { id: 39, jogador_id: 15, campeonato_id: 10, time_id: 35, edicao: 2,  data: "2026-09-12" },
     { id: 40, jogador_id: 14, campeonato_id: 2, time_id: 36, edicao: 7,  data: "2026-09-18" },
-    { id: 41, jogador_id: 6, campeonato_id: 6, time_id: 37, edicao: 3,  data: "2026-09-25" }
+    { id: 41, jogador_id: 6, campeonato_id: 6, time_id: 37, edicao: 3,  data: "2026-09-25" },
+    { id: 42, jogador_id: 2, campeonato_id: 12, time_id: 38, edicao: 1,  data: "2026-10-4" }
   ]
 }
