@@ -5,14 +5,14 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Hall da Fama · ORG ON CAMPS eFootball</title>
   <meta name="description" content="Todos os campeões dos campeonatos semanais de eFootball da ORG ON CAMPS: pódio, ranking histórico e estatísticas." />
-  <link rel="icon" type="image/png" href="assets/logo.png" />
+  <link rel="icon" type="image/png" href="assets/logoef27.png" />
 
   <!-- Preview do link no WhatsApp, Instagram, Discord etc. -->
   <meta property="og:type" content="website" />
   <meta property="og:url" content="https://hall-da-fama-theta.vercel.app/" />
   <meta property="og:title" content="Hall da Fama · ORG ON CAMPS" />
   <meta property="og:description" content="Os maiores campeões do eFootball da ORG ON CAMPS. Veja o pódio, o ranking e todos os títulos." />
-  <meta property="og:image" content="https://hall-da-fama-theta.vercel.app/assets/banner.png" />
+  <meta property="og:image" content="https://hall-da-fama-theta.vercel.app/assets/banneref27.png" />
   <meta name="twitter:card" content="summary_large_image" />
 
   <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Barlow+Condensed:wght@400;600;700&family=Barlow:wght@300;400;500&display=swap" rel="stylesheet" />
@@ -23,7 +23,7 @@
   <!-- ─── NAV ─────────────────────────────────────────── -->
   <nav>
     <a class="nav-logo" href="#">
-      <img src="assets/logo.png" height="44" alt="ON Esports" />
+      <img class="logo-glow" src="assets/logoef27.png" height="44" alt="ON Esports" />
     </a>
     <ul class="nav-links">
       <li><a href="#podium">Pódio</a></li>
@@ -36,8 +36,10 @@
   <!-- ─── HERO ─────────────────────────────────────────── -->
   <section id="hero">
     <div class="hero-glow"></div>
+    <div class="hero-glow-cyan"></div>
+    <div class="hero-glow-violet"></div>
     <div class="hero-lines"></div>
-    <img src="assets/logo.png" height="50" alt="ON Esports" style="margin-bottom:2rem;animation:fadeUp 0.6s ease both;" />
+    <img class="logo-glow" src="assets/logoef27.png" height="50" alt="ON Esports" style="margin-bottom:2rem;animation:fadeUp 0.6s ease both;" />
     <div class="hero-badge">⚽ eFootball · Campeonatos Semanais</div>
     <h1 class="hero-title">
       Hall da Fama
@@ -51,7 +53,7 @@
   <!-- TROQUE O LINK DO GRUPO AQUI (e no botão flutuante lá embaixo) -->
   <div class="banner-wrap">
     <a class="banner-link" href="https://chat.whatsapp.com/IbF3DjtJJ00LP0znsKEipL?mode=gi_t" target="_blank" rel="noopener">
-      <img src="assets/banner.png" alt="Venha jogar na nossa org" class="banner-img" />
+      <img src="assets/banneref27.png" alt="Venha jogar na nossa org" class="banner-img" />
     </a>
     <a class="btn-whats" href="https://chat.whatsapp.com/IbF3DjtJJ00LP0znsKEipL?mode=gi_t" target="_blank" rel="noopener">
       <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 11.5a8.4 8.4 0 0 1-12.3 7.5L3 21l2-5.7A8.4 8.4 0 1 1 21 11.5z"/></svg>
@@ -61,9 +63,12 @@
 
   <!-- ─── PODIUM ───────────────────────────────────────── -->
   <section id="podium">
+    <div class="bg-glow pink top-left"></div>
+    <div class="bg-glow cyan bottom-right"></div>
     <div class="section-header">
       <span class="section-label">Os maiores</span>
       <h2 class="section-title">Pódio dos Campeões</h2>
+      <p class="section-sub">Os 3 jogadores com mais títulos conquistados na organização. Clique em alguém para ver o histórico completo.</p>
     </div>
     <div class="divider"></div>
     <div class="podium-stage" id="podiumStage"></div>
@@ -71,9 +76,11 @@
 
   <!-- ─── CHAMPIONS ────────────────────────────────────── -->
   <section id="champions">
+    <div class="bg-glow violet top-right"></div>
     <div class="section-header">
       <span class="section-label">Histórico completo</span>
       <h2 class="section-title">Lista de Campeões</h2>
+      <p class="section-sub">Toda edição, de todo campeonato, já disputado. Busque por nome, filtre por campeonato ou jogador, e clique nas colunas para ordenar.</p>
     </div>
     <div class="divider"></div>
 
@@ -108,9 +115,12 @@
 
   <!-- ─── RANKING ──────────────────────────────────────── -->
   <section id="ranking">
+    <div class="bg-glow cyan top-left"></div>
+    <div class="bg-glow pink bottom-right"></div>
     <div class="section-header">
       <span class="section-label">Classificação geral</span>
       <h2 class="section-title">Ranking Histórico</h2>
+      <p class="section-sub">Todo mundo que já venceu pelo menos um campeonato, do 1º lugar ao último título conquistado.</p>
     </div>
     <div class="divider"></div>
     <div class="ranking-grid" id="rankingGrid"></div>
@@ -118,9 +128,12 @@
 
   <!-- ─── GRÁFICOS ─────────────────────────────────────── -->
   <section id="graficos">
+    <div class="bg-glow violet top-left"></div>
+    <div class="bg-glow cyan bottom-right"></div>
     <div class="section-header">
       <span class="section-label">Estatísticas visuais</span>
       <h2 class="section-title">Gráficos</h2>
+      <p class="section-sub">Quem mais vence, quais campeonatos e times mais aparecem, e como os títulos foram evoluindo com o tempo.</p>
     </div>
     <div class="divider"></div>
     <div class="charts-grid">

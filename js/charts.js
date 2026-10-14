@@ -32,20 +32,30 @@
 
 (function () {
 
-  // ── Paleta ──────────────────────────────────────────
-  const GOLD     = '#D4A017';
-  const GOLD2    = '#F5C842';
-  const SILVER   = '#A8B2C0';
-  const BRONZE   = '#CD7F32';
-  const MUTED    = '#6B7585';
-  const TEXT     = '#E8ECF0';
-  const SURFACE  = '#1A1F2E';
-  const BORDER   = 'rgba(212,160,23,0.18)';
+  // ── Paleta neon (consistente com css/style.css) ──────
+  // Acentos vivos: usados em títulos, textos e linhas (contraste já validado)
+  const PINK     = '#FF2EC4';   // rosa-choque neon
+  const CYAN     = '#00E5FF';   // ciano/turquesa neon
+  const VIOLET   = '#8B5CF6';   // roxo/violeta (transição)
+  const MUTED    = '#8782A8';   // lavanda apagado — tudo fora do pódio
+  const TEXT     = '#EDE9FA';
+  const SURFACE  = '#141827';
+  const BORDER   = 'rgba(255,46,196,0.18)';
+
+  // Tons "seguros para dados": versões ajustadas das mesmas cores para
+  // ficarem distinguíveis lado a lado (barras, pizza) — ver dataviz skill.
+  const MARK_PINK    = '#E619B0';
+  const MARK_CYAN    = '#009ED8';
+  const MARK_VIOLET  = '#8B5CF6';
+  const MARK_PURPLE  = '#A855F7';
+  const MARK_PINK2   = '#E8539F';
+  const MARK_TEAL    = '#0598B5';
+  const MARK_INDIGO  = '#6D5ED6';
+  const MARK_FUCHSIA = '#C13584';
 
   const PALETTE = [
-    '#D4A017', '#F5C842', '#A8B2C0', '#CD7F32',
-    '#4A90E2', '#7ED321', '#E85D75', '#50E3C2',
-    '#9B59B6', '#E67E22'
+    MARK_PINK, MARK_VIOLET, MARK_CYAN, MARK_PURPLE,
+    MARK_PINK2, MARK_TEAL, MARK_INDIGO, MARK_FUCHSIA
   ];
 
   // ── Defaults globais ────────────────────────────────
@@ -62,7 +72,7 @@
     backgroundColor: SURFACE,
     borderColor: BORDER,
     borderWidth: 1,
-    titleColor: GOLD,
+    titleColor: PINK,
     bodyColor: TEXT,
     padding: 10,
     cornerRadius: 4,
@@ -94,9 +104,9 @@
     const labels  = entries.map(([id]) => getPlayer(parseInt(id))?.nome || '?');
     const values  = entries.map(([, v]) => v);
     const colors  = entries.map((_, i) => {
-      if (i === 0) return GOLD;
-      if (i === 1) return SILVER;
-      if (i === 2) return BRONZE;
+      if (i === 0) return MARK_PINK;
+      if (i === 1) return MARK_CYAN;
+      if (i === 2) return MARK_VIOLET;
       return MUTED;
     });
 
@@ -122,7 +132,7 @@
           title: {
             display: true,
             text: 'TÍTULOS POR JOGADOR',
-            color: GOLD,
+            color: PINK,
             font: { family: "'Bebas Neue', cursive", size: 18 },
             padding: { bottom: 16 }
           }
@@ -180,7 +190,7 @@
           title: {
             display: true,
             text: 'TÍTULOS POR CAMPEONATO',
-            color: GOLD,
+            color: PINK,
             font: { family: "'Bebas Neue', cursive", size: 18 },
             padding: { bottom: 16 }
           }
@@ -204,9 +214,9 @@
           label: 'Títulos',
           data: values,
           backgroundColor: labels.map((_, i) =>
-            `rgba(212,160,23,${Math.max(0.25, 1 - i * 0.07)})`
+            `rgba(0,158,216,${Math.max(0.25, 1 - i * 0.07)})`
           ),
-          borderColor: GOLD,
+          borderColor: MARK_CYAN,
           borderWidth: 1,
           borderRadius: 4,
         }]
@@ -219,7 +229,7 @@
           title: {
             display: true,
             text: 'TÍTULOS POR TIME',
-            color: GOLD,
+            color: PINK,
             font: { family: "'Bebas Neue', cursive", size: 18 },
             padding: { bottom: 16 }
           }
@@ -273,10 +283,10 @@
           {
             label: 'Total acumulado',
             data: accumulated,
-            borderColor: GOLD,
-            backgroundColor: 'rgba(212,160,23,0.08)',
+            borderColor: PINK,
+            backgroundColor: 'rgba(255,46,196,0.08)',
             borderWidth: 2,
-            pointBackgroundColor: GOLD,
+            pointBackgroundColor: PINK,
             pointRadius: 5,
             pointHoverRadius: 7,
             fill: true,
@@ -286,11 +296,11 @@
           {
             label: 'Títulos no mês',
             data: perMonth,
-            borderColor: SILVER,
-            backgroundColor: 'rgba(168,178,192,0.06)',
+            borderColor: CYAN,
+            backgroundColor: 'rgba(0,229,255,0.06)',
             borderWidth: 2,
             borderDash: [5, 4],
-            pointBackgroundColor: SILVER,
+            pointBackgroundColor: CYAN,
             pointRadius: 4,
             pointHoverRadius: 6,
             fill: false,
@@ -314,7 +324,7 @@
           title: {
             display: true,
             text: 'EVOLUÇÃO HISTÓRICA DE TÍTULOS',
-            color: GOLD,
+            color: PINK,
             font: { family: "'Bebas Neue', cursive", size: 18 },
             padding: { bottom: 16 }
           }
@@ -328,16 +338,16 @@
           yAcc: {
             position: 'left',
             grid: gridStyle,
-            ticks: { stepSize: 2, color: GOLD },
+            ticks: { stepSize: 2, color: PINK },
             border: { color: BORDER },
-            title: { display: true, text: 'Acumulado', color: GOLD }
+            title: { display: true, text: 'Acumulado', color: PINK }
           },
           yMonth: {
             position: 'right',
             grid: { display: false },
-            ticks: { stepSize: 1, color: SILVER },
+            ticks: { stepSize: 1, color: CYAN },
             border: { color: BORDER },
-            title: { display: true, text: 'Por mês', color: SILVER }
+            title: { display: true, text: 'Por mês', color: CYAN }
           }
         }
       }
