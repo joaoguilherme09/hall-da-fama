@@ -745,6 +745,8 @@ td {
 
 .chart-wide { grid-column: 1 / -1; }
 
+.chart-canvas-wrap { position: relative; width: 100%; }
+
 /* ─── MODAL ──────────────────────────────────────────── */
 .modal-overlay {
   position: fixed;
