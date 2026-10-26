@@ -121,6 +121,7 @@ const DATA = {
     { id: 41, jogador_id: 6, campeonato_id: 6, time_id: 37, edicao: 3,  data: "2026-09-25" },
     { id: 42, jogador_id: 2, campeonato_id: 12, time_id: 38, edicao: 1,  data: "2026-10-04" },
     { id: 43, jogador_id: 16, campeonato_id: 2, time_id: 18, edicao: 8,  data: "2026-10-12" },
-    { id: 44, jogador_id: 6, campeonato_id: 3, time_id: 2, edicao: 10,  data: "2026-10-18" }
+    { id: 44, jogador_id: 6, campeonato_id: 3, time_id: 2, edicao: 10,  data: "2026-10-18" },
+    { id: 45, jogador_id: 15, campeonato_id: 5, time_id: 25, edicao: 7,  data: "2026-10-25" }
   ]
 }
