@@ -73,7 +73,8 @@ const DATA = {
     { id: 35, nome: "Novorizontino" },
     { id: 36, nome: "Palmeiras" },
     { id: 37, nome: "Mirassol" },
-    { id: 38, nome: "Atalanta" }
+    { id: 38, nome: "Atalanta" },
+    { id: 39, nome: "Egito" }
 
   ],
 
@@ -122,6 +123,7 @@ const DATA = {
     { id: 42, jogador_id: 2, campeonato_id: 12, time_id: 38, edicao: 1,  data: "2026-10-04" },
     { id: 43, jogador_id: 16, campeonato_id: 2, time_id: 18, edicao: 8,  data: "2026-10-12" },
     { id: 44, jogador_id: 6, campeonato_id: 3, time_id: 2, edicao: 10,  data: "2026-10-18" },
-    { id: 45, jogador_id: 15, campeonato_id: 5, time_id: 25, edicao: 7,  data: "2026-10-25" }
+    { id: 45, jogador_id: 15, campeonato_id: 5, time_id: 25, edicao: 7,  data: "2026-10-25" },
+    { id: 46, jogador_id: 14, campeonato_id: 1, time_id: 39, edicao: 8,  data: "2026-11-02" }
   ]
 }
