@@ -145,7 +145,7 @@ O site usa um tema **neon escuro**, com rosa, violeta e ciano sobre fundo quase 
 
 <img src="assets/readme/divider.svg" width="100%" alt="" />
 
-```
+``
 <img src="assets/readme/divider.svg" width="100%" alt="" />
 
 ## 🗺️ Roadmap
