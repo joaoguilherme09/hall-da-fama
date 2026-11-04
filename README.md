@@ -145,39 +145,6 @@ O site usa um tema **neon escuro**, com rosa, violeta e ciano sobre fundo quase 
 
 <img src="assets/readme/divider.svg" width="100%" alt="" />
 
-## 📁 Estrutura do projeto
-
-```text
-hall-da-fama/
-├── index.html          # Página principal
-├── css/
-│   └── style.css       # Estilos do site
-├── data/
-│   └── data.js         # Dados dos campeões (atualize aqui!)
-├── js/
-│   ├── app.js          # Tabela, filtros, busca, pódio e ranking
-│   └── charts.js       # Gráficos e estatísticas
-└── assets/
-    ├── logoef27.png    # Logo
-    ├── banneref27.png  # Banner
-    └── readme/         # Imagens usadas neste README (botões, prints, paleta)
-```
-
-<img src="assets/readme/divider.svg" width="100%" alt="" />
-
-## 🚀 Como rodar localmente
-
-```bash
-# 1. Clone o repositório
-git clone <url-do-repositorio>
-
-# 2. Entre na pasta
-cd hall-da-fama
-
-# 3. Abra no navegador
-# Opção A: dê dois cliques no index.html
-# Opção B: use um servidor local
-npx serve .
 ```
 <img src="assets/readme/divider.svg" width="100%" alt="" />
 
