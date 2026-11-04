@@ -1,0 +1,45 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="330" height="70" viewBox="0 0 330 70" role="img" aria-label="Entrar no grupo do WhatsApp da ORG ON CAMPS">
+  <defs>
+    <linearGradient id="wa" x1="0" y1="0" x2="330" y2="70" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#2EE87A"/>
+      <stop offset="1" stop-color="#1FB855"/>
+    </linearGradient>
+    <filter id="glow" x="-20%" y="-60%" width="140%" height="220%">
+      <feGaussianBlur stdDeviation="5" result="b"/>
+      <feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+  </defs>
+
+  <!-- brilho externo pulsando -->
+  <rect x="6" y="6" width="318" height="58" rx="29" fill="#25D366" opacity="0.45" filter="url(#glow)">
+    <animate attributeName="opacity" values="0.2;0.6;0.2" dur="2.2s" repeatCount="indefinite"/>
+  </rect>
+
+  <!-- corpo do botão (pílula) -->
+  <rect x="6" y="6" width="318" height="58" rx="29" fill="url(#wa)"/>
+  <rect x="6" y="6" width="318" height="58" rx="29" fill="none" stroke="#B6FFD2" stroke-opacity="0.55" stroke-width="1.5"/>
+
+  <!-- anel de pulso do ícone -->
+  <circle cx="40" cy="35" r="22" fill="none" stroke="#FFFFFF" stroke-width="2" opacity="0">
+    <animate attributeName="r" values="22;30" dur="2s" repeatCount="indefinite"/>
+    <animate attributeName="opacity" values="0.7;0" dur="2s" repeatCount="indefinite"/>
+  </circle>
+
+  <!-- medalhão com o balão do WhatsApp -->
+  <circle cx="40" cy="35" r="22" fill="#FFFFFF"/>
+  <g transform="translate(40 35) scale(1.25)">
+    <path d="M0,-10 A10,10 0 1 1 -5.2,8.6 L-10.5,10.5 L-8.8,5.4 A10,10 0 0 1 0,-10 Z" fill="#25D366"/>
+    <path d="M-4.2,-3.6 C-5,-0.5 -2,4 2.6,5.2 L5,3.4 L2.2,0.8 L0.6,1.8 C-0.6,1.2 -1.6,0.2 -2.2,-1.2 L-1.2,-2.8 L-3,-5.4 Z" fill="#FFFFFF"/>
+  </g>
+
+  <!-- textos -->
+  <text x="78" y="33" font-family="'Bebas Neue', Impact, 'Arial Narrow', sans-serif" font-size="26" textLength="172" lengthAdjust="spacingAndGlyphs" fill="#07050D">ENTRAR NA ORG</text>
+  <text x="79" y="53" font-family="'Barlow Condensed', 'Arial Narrow', Arial, sans-serif" font-size="11" textLength="150" lengthAdjust="spacingAndGlyphs" font-weight="700" fill="#07331B">GRUPO DO WHATSAPP</text>
+
+  <!-- seta -->
+  <g transform="translate(297 35)" fill="none" stroke="#07050D" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M-8 0h16M2 -7l7 7-7 7">
+      <animateTransform attributeName="transform" type="translate" values="0 0;4 0;0 0" dur="1.6s" repeatCount="indefinite"/>
+    </path>
+  </g>
+</svg>

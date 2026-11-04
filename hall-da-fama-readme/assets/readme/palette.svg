@@ -1,0 +1,36 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="860" height="170" viewBox="0 0 860 170" role="img" aria-label="Paleta de cores do Hall da Fama">
+  <rect width="860" height="170" rx="22" fill="#07050D"/>
+  <rect x="1" y="1" width="858" height="168" rx="21" fill="none" stroke="#FF2EC4" stroke-opacity="0.25" stroke-width="2"/>
+  <g font-family="'Barlow Condensed', 'Arial Narrow', Arial, sans-serif" text-anchor="middle">
+    <g transform="translate(75 0)">
+      <circle cx="0" cy="68" r="34" fill="#FF2EC4"/>
+      <text y="125" font-size="17" font-weight="700" letter-spacing="2" fill="#FFFFFF">ROSA</text>
+      <text y="146" font-size="14" letter-spacing="1" fill="#8782A8">#FF2EC4</text>
+    </g>
+    <g transform="translate(215 0)">
+      <circle cx="0" cy="68" r="34" fill="#8B5CF6"/>
+      <text y="125" font-size="17" font-weight="700" letter-spacing="2" fill="#FFFFFF">VIOLETA</text>
+      <text y="146" font-size="14" letter-spacing="1" fill="#8782A8">#8B5CF6</text>
+    </g>
+    <g transform="translate(355 0)">
+      <circle cx="0" cy="68" r="34" fill="#00E5FF"/>
+      <text y="125" font-size="17" font-weight="700" letter-spacing="2" fill="#FFFFFF">CIANO</text>
+      <text y="146" font-size="14" letter-spacing="1" fill="#8782A8">#00E5FF</text>
+    </g>
+    <g transform="translate(495 0)">
+      <circle cx="0" cy="68" r="34" fill="#07050D" stroke="#8782A8" stroke-width="2"/>
+      <text y="125" font-size="17" font-weight="700" letter-spacing="2" fill="#FFFFFF">FUNDO</text>
+      <text y="146" font-size="14" letter-spacing="1" fill="#8782A8">#07050D</text>
+    </g>
+    <g transform="translate(635 0)">
+      <circle cx="0" cy="68" r="34" fill="#141827" stroke="#8782A8" stroke-width="2"/>
+      <text y="125" font-size="17" font-weight="700" letter-spacing="2" fill="#FFFFFF">SUPERFÍCIE</text>
+      <text y="146" font-size="14" letter-spacing="1" fill="#8782A8">#141827</text>
+    </g>
+    <g transform="translate(775 0)">
+      <circle cx="0" cy="68" r="34" fill="#25D366"/>
+      <text y="125" font-size="17" font-weight="700" letter-spacing="2" fill="#FFFFFF">WHATSAPP</text>
+      <text y="146" font-size="14" letter-spacing="1" fill="#8782A8">#25D366</text>
+    </g>
+  </g>
+</svg>

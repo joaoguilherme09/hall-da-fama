@@ -1,0 +1,49 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="330" height="70" viewBox="0 0 330 70" role="img" aria-label="Acessar o site Hall da Fama">
+  <defs>
+    <linearGradient id="neon" x1="0" y1="0" x2="330" y2="0" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#FF2EC4"/>
+      <stop offset="0.5" stop-color="#8B5CF6"/>
+      <stop offset="1" stop-color="#00E5FF"/>
+    </linearGradient>
+    <linearGradient id="fill" x1="0" y1="0" x2="330" y2="70" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#1A0B2E"/>
+      <stop offset="1" stop-color="#0B0817"/>
+    </linearGradient>
+    <filter id="glow" x="-20%" y="-60%" width="140%" height="220%">
+      <feGaussianBlur stdDeviation="5" result="b"/>
+      <feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+  </defs>
+
+  <!-- brilho externo pulsando -->
+  <rect x="6" y="6" width="318" height="58" rx="29" fill="none" stroke="url(#neon)" stroke-width="3" opacity="0.5" filter="url(#glow)">
+    <animate attributeName="opacity" values="0.25;0.75;0.25" dur="2.6s" repeatCount="indefinite"/>
+  </rect>
+
+  <!-- corpo do botão (pílula) -->
+  <rect x="6" y="6" width="318" height="58" rx="29" fill="url(#fill)" stroke="url(#neon)" stroke-width="2.5"/>
+
+  <!-- medalhão do troféu -->
+  <circle cx="40" cy="35" r="22" fill="#0B0817" stroke="url(#neon)" stroke-width="2"/>
+  <g transform="translate(40 35) scale(1.05) translate(-12 -12)" fill="none" stroke="url(#neon)" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M8 4h8v5a4 4 0 0 1-8 0z"/>
+    <path d="M8 5.5H5v1.5a3 3 0 0 0 3 3"/>
+    <path d="M16 5.5h3v1.5a3 3 0 0 1-3 3"/>
+    <path d="M12 13v4"/>
+    <path d="M9 20h6M10 17h4v3h-4z"/>
+  </g>
+
+  <!-- textos -->
+  <text x="78" y="33" font-family="'Bebas Neue', Impact, 'Arial Narrow', sans-serif" font-size="26" textLength="172" lengthAdjust="spacingAndGlyphs" fill="#FFFFFF">ACESSAR O SITE</text>
+  <circle cx="82" cy="50" r="3" fill="#00E5FF">
+    <animate attributeName="opacity" values="1;0.2;1" dur="1.6s" repeatCount="indefinite"/>
+  </circle>
+  <text x="92" y="53.5" font-family="'Barlow Condensed', 'Arial Narrow', Arial, sans-serif" font-size="11" textLength="165" lengthAdjust="spacingAndGlyphs" fill="#00E5FF">HALL DA FAMA · AO VIVO</text>
+
+  <!-- seta -->
+  <g transform="translate(297 35)" fill="none" stroke="url(#neon)" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M-8 0h16M2 -7l7 7-7 7">
+      <animateTransform attributeName="transform" type="translate" values="0 0;4 0;0 0" dur="1.6s" repeatCount="indefinite"/>
+    </path>
+  </g>
+</svg>
