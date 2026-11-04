@@ -112,22 +112,6 @@ hall-da-fama/
 
 ---
 
-## 🚀 Como rodar localmente
-
-```bash
-# 1. Clone o repositório
-git clone <url-do-repositorio>
-
-# 2. Entre na pasta
-cd hall-da-fama
-
-# 3. Abra no navegador
-# Opção A: dê dois cliques no index.html
-# Opção B: use um servidor local
-npx serve .
-```
-
-Não há dependências para instalar nem etapa de build.
 
 
 ## 🗺️ Roadmap
