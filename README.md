@@ -129,15 +129,6 @@ npx serve .
 
 Não há dependências para instalar nem etapa de build.
 
----
-
-## 🏁 Como adicionar um novo campeão
-
-1. Abra o arquivo `data/data.js`.
-2. Adicione um novo registro seguindo o mesmo formato dos que já existem (edição, jogador, campeonato, time e data).
-3. Salve e atualize a página: tabela, pódio, ranking e gráficos se atualizam automaticamente.
-
----
 
 ## 🗺️ Roadmap
 
@@ -151,8 +142,8 @@ Não há dependências para instalar nem etapa de build.
 
 ## 👥 Créditos
 
-- Desenvolvido por [**João Guilherme**](https://github.com/joaoguilherme09) (conforme o rodapé do site).
-- Feito para a comunidade **ORG ON CAMPS** ⚽
+- Desenvolvido por [**João Guilherme**](https://github.com/joaoguilherme09).
+- Feito para a comunidade de efootball : **ORG ON CAMPS** ⚽
 
 ---
 
