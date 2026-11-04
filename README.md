@@ -179,15 +179,6 @@ cd hall-da-fama
 # Opção B: use um servidor local
 npx serve .
 ```
-
-Não há dependências para instalar nem etapa de build. O Chart.js é carregado por CDN, então é preciso estar online para ver os gráficos.
-
-## 🏁 Como adicionar um novo campeão
-
-1. Abra o arquivo `data/data.js`.
-2. Adicione um novo registro seguindo o mesmo formato dos que já existem (edição, jogador, campeonato, time e data).
-3. Salve e atualize a página: tabela, pódio, ranking e gráficos se atualizam automaticamente.
-
 <img src="assets/readme/divider.svg" width="100%" alt="" />
 
 ## 🗺️ Roadmap
