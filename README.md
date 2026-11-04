@@ -1,83 +1,167 @@
 <div align="center">
 
-# 🏆 Hall da Fama
-### ORG ON CAMPS · eFootball
+<img src="assets/logoef27.png" alt="Logo ON Esports" width="130" />
 
-Sistema web desenvolvido para registrar, organizar e exibir o histórico de campeões dos campeonatos da comunidade ORG ON CAMPS no eFootball.
+# 🏆 Hall da Fama · ORG ON CAMPS
 
-<br>
+### Os maiores campeões do eFootball
 
-🔗 <a href="https://hall-da-fama-theta.vercel.app" target="_blank">Acessar Projeto</a>
+Um site que reúne **todos os campeões dos campeonatos semanais de eFootball** da ORG ON CAMPS: pódio, ranking histórico, lista completa de edições e estatísticas visuais.
+
+<br />
+
+[![Acessar o site](https://img.shields.io/badge/🌐_Acessar_o_site-ao_vivo-00C853?style=for-the-badge)](https://hall-da-fama-theta.vercel.app/)
+[![Grupo do WhatsApp](https://img.shields.io/badge/WhatsApp-Entrar_na_org-25D366?style=for-the-badge&logo=whatsapp&logoColor=white)](https://chat.whatsapp.com/IbF3DjtJJ00LP0znsKEipL?mode=gi_t)
+
+![HTML5](https://img.shields.io/badge/HTML5-E34F26?style=flat-square&logo=html5&logoColor=white)
+![CSS3](https://img.shields.io/badge/CSS3-1572B6?style=flat-square&logo=css3&logoColor=white)
+![JavaScript](https://img.shields.io/badge/JavaScript-F7DF1E?style=flat-square&logo=javascript&logoColor=black)
+![Vercel](https://img.shields.io/badge/Deploy-Vercel-000000?style=flat-square&logo=vercel&logoColor=white)
+![Status](https://img.shields.io/badge/status-online-brightgreen?style=flat-square)
+
+[🎯 Sobre](#-sobre-o-projeto) · [✨ Funcionalidades](#-funcionalidades) · [🛠️ Tecnologias](#️-tecnologias-utilizadas) · [📁 Estrutura](#-estrutura-do-projeto) · [🚀 Como rodar](#-como-rodar-localmente) · [🗺️ Roadmap](#️-roadmap)
 
 </div>
 
 ---
 
-# 📸 Preview
+## 🎯 Sobre o projeto
 
-## 💻 Desktop
+A **ORG ON CAMPS** organiza campeonatos semanais de **eFootball**. Com o passar das edições, o histórico de campeões ficou espalhado e difícil de consultar.
 
-- 🥇 Pódio dos maiores campeões
-- 📊 Ranking histórico completo
-- 🏆 Lista de campeões
-- 📈 Estatísticas e gráficos
-- 👤 Modal com histórico detalhado
+O **Hall da Fama** nasceu para resolver isso: um lugar único, rápido e bonito para **celebrar quem venceu**, registrar a história da organização e mostrar, com dados, quem são os maiores campeões.
 
-## 📱 Mobile
+**Para quem é:**
 
-- 📲 Layout responsivo
-- ↔️ Scroll horizontal na tabela
-- ⚡ Navegação otimizada
+- 🎮 **Jogadores**: conferir o próprio histórico de títulos e a posição no ranking.
+- 👀 **Visitantes**: conhecer a comunidade e ver o nível dos campeonatos.
+- 🛡️ **Administração**: ter um registro oficial e organizado de todas as edições.
+
+> 💬 Quer jogar com a gente? O botão do WhatsApp no site leva direto ao grupo da org.
 
 ---
 
-# 🚀 Tecnologias Utilizadas
+## ✨ Funcionalidades
+
+| | Recurso | Descrição |
+|---|---------|-----------|
+| 🥇 | **Pódio dos Campeões** | Os 3 jogadores com mais títulos. Ao clicar em um deles, abre o histórico completo. |
+| 📋 | **Lista de Campeões** | Todas as edições de todos os campeonatos, com edição, jogador, campeonato, time, data e títulos. |
+| 🔎 | **Busca e filtros** | Pesquise por nome e filtre por campeonato ou jogador, com botão para limpar os filtros. |
+| ↕️ | **Ordenação** | Clique nas colunas da tabela para ordenar. |
+| 📈 | **Ranking Histórico** | Todos que já venceram pelo menos um campeonato, do 1º ao último colocado em títulos. |
+| 📊 | **Gráficos** | Quem mais vence, campeonatos e times mais frequentes e a evolução dos títulos ao longo do tempo. |
+| 📱 | **Responsivo** | Layout pensado para celular e computador. |
+| 🔗 | **Compartilhamento** | Metadados Open Graph e Twitter Card para um preview bonito ao compartilhar o link. |
+
+<details>
+<summary><b>🔍 Ver mais detalhes de cada seção</b></summary>
+
+<br />
+
+**Pódio**
+Destaca os três maiores campeões da organização. Cada card é clicável e mostra o histórico completo do jogador.
+
+**Campeões**
+Tabela completa e interativa com todas as edições já disputadas. Combina busca por texto, filtros por campeonato e por jogador, e ordenação por qualquer coluna.
+
+**Ranking**
+Classificação geral baseada na quantidade de títulos, listando todos os jogadores que já conquistaram ao menos uma taça.
+
+**Gráficos**
+Visualização dos dados para entender a evolução da organização: líderes de títulos, distribuição por campeonato e por time, e linha do tempo das conquistas.
+
+</details>
+
+---
+
+## 🛠️ Tecnologias utilizadas
 
 <div align="center">
 
-| Tecnologia | Descrição |
-|---|---|
-| HTML5 | Estrutura do projeto |
-| CSS3 | Estilização e responsividade |
-| JavaScript | Lógica e interatividade |
-| Chart.js | Gráficos estatísticos |
-| Vercel | Deploy da aplicação |
+| Camada | Tecnologia | Uso no projeto |
+|:------:|:----------:|:---------------|
+| 🧱 **Estrutura** | ![HTML5](https://img.shields.io/badge/HTML5-E34F26?style=flat-square&logo=html5&logoColor=white) | Marcação semântica, seções e metadados de SEO/redes sociais |
+| 🎨 **Estilo** | ![CSS3](https://img.shields.io/badge/CSS3-1572B6?style=flat-square&logo=css3&logoColor=white) | Layout responsivo e identidade visual da org |
+| ⚙️ **Lógica** | ![JavaScript](https://img.shields.io/badge/JavaScript-F7DF1E?style=flat-square&logo=javascript&logoColor=black) | Renderização da tabela, busca, filtros, ordenação, pódio e ranking |
+| 📊 **Dados** | ![JS](https://img.shields.io/badge/data.js-base_de_dados-F7DF1E?style=flat-square&logo=javascript&logoColor=black) | Registro de todos os campeões em um único arquivo, fácil de atualizar |
+| ☁️ **Hospedagem** | ![Vercel](https://img.shields.io/badge/Vercel-000000?style=flat-square&logo=vercel&logoColor=white) | Deploy contínuo e publicação do site |
 
 </div>
 
+> 💡 O projeto é **100% front-end e sem build**: basta abrir o `index.html`. Mantê-lo simples facilita a manutenção por qualquer pessoa da org.
+
 ---
 
-# ✨ Funcionalidades
+## 📁 Estrutura do projeto
 
-```diff
-+ Ranking automático de campeões
-+ Pódio dos maiores vencedores
-+ Sistema de filtros
-+ Busca dinâmica
-+ Paginação
-+ Modal com histórico dos jogadores
-+ Estatísticas em tempo real
-+ Gráficos interativos
-+ Responsividade para dispositivos móveis
+```text
+hall-da-fama/
+├── index.html          # Página principal
+├── css/
+│   └── style.css       # Estilos do site
+├── data/
+│   └── data.js         # Dados dos campeões (atualize aqui!)
+├── js/
+│   ├── app.js          # Tabela, filtros, busca, pódio e ranking
+│   └── charts.js       # Gráficos e estatísticas
+└── assets/
+    ├── logoef27.png    # Logo
+    └── banneref27.png  # Banner
 ```
 
-# 👨‍💻 Autor
+---
 
-<div align="center">
+## 🚀 Como rodar localmente
 
-### João Guilherme Pereira Mendes
+```bash
+# 1. Clone o repositório
+git clone <url-do-repositorio>
 
-🔗 GitHub:  
-[github.com/joaoguilherme09](https://github.com/joaoguilherme09)
+# 2. Entre na pasta
+cd hall-da-fama
 
-</div>
+# 3. Abra no navegador
+# Opção A: dê dois cliques no index.html
+# Opção B: use um servidor local
+npx serve .
+```
+
+Não há dependências para instalar nem etapa de build.
 
 ---
 
-# ⭐ Objetivo do Projeto
+## 🏁 Como adicionar um novo campeão
+
+1. Abra o arquivo `data/data.js`.
+2. Adicione um novo registro seguindo o mesmo formato dos que já existem (edição, jogador, campeonato, time e data).
+3. Salve e atualize a página: tabela, pódio, ranking e gráficos se atualizam automaticamente.
+
+---
+
+## 🗺️ Roadmap
+
+- [ ] 💬 Botão fixo para o grupo do WhatsApp
+- [ ] 📊 Gráficos com porcentagens e visual aprimorado
+- [ ] 🌗 Tema claro e escuro
+- [ ] 📖 Aba **"Sobre nós"** com a história da org
+- [ ] 🏅 Ranking geral com visual mais atraente
+
+---
+
+## 👥 Créditos
+
+- Desenvolvido por [**João Guilherme**](https://github.com/joaoguilherme09) (conforme o rodapé do site).
+- Feito para a comunidade **ORG ON CAMPS** ⚽
+
+---
 
 <div align="center">
 
-Projeto desenvolvido com foco em prática de desenvolvimento front-end, manipulação de dados e criação de interfaces modernas voltadas para organizar estatísticas e contagens de títulos eSports de Efootball da organização 'ORG ON CAMPS'.
+**🏆 Hall da Fama · ORG ON CAMPS eFootball**
+
+[🌐 Visitar o site](https://hall-da-fama-theta.vercel.app/) · [💬 Entrar na org](https://chat.whatsapp.com/IbF3DjtJJ00LP0znsKEipL?mode=gi_t)
+
+⭐ Se curtiu o projeto, deixe uma estrela no repositório!
 
 </div>
